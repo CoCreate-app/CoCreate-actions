@@ -1,4 +1,4 @@
-
+// 
 const CoCreateAction = {
   attribute: 'data-actions',
   actions: {},
