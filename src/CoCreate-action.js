@@ -1,4 +1,4 @@
-// -82as
+// -82
 const CoCreateAction = {
   attribute: 'data-actions',
   actions: {},
