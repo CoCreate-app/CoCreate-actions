@@ -1,0 +1,23 @@
+{
+  "name": "cocreate-push-all-repositories",
+  "version": "1.0.0",
+  "description": "Do it push, all repositories Cocreate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "push": "node push.js",
+    "pull": "node pull.js"
+  },
+  "keywords": [
+    "push",
+    "github"
+  ],
+  "author": "jeanmendozar@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "prompt": "^1.0.0",
+    "shelljs": "^0.8.4",
+    "simple-git": "^2.12.0"
+  }
+}
