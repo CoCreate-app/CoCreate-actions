@@ -1,6 +1,6 @@
-const utils_git = require('./utils_git');
+const utils_git = require('../utils/git.js');
 const shellJs = require('shelljs');
-const list_repositories = require('./list_repositories.js');
+const list_repositories = require('../list_repositories.js');
 //utils_git.push()
 
 
