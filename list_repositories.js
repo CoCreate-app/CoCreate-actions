@@ -222,8 +222,8 @@ module.exports = [
         
 // Plugins        
         {
-            'path':'../CoCreate-plugins/CoCreate-calendar',
-            'repo' : 'github.com/CoCreate-app/CoCreate-calendar.git'
+            'path':'../CoCreate-plugins/CoCreate-fullcalendar',
+            'repo' : 'github.com/CoCreate-app/CoCreate-fullcalendar.git'
         },
         {
             'path':'../CoCreate-plugins/CoCreate-charts',
