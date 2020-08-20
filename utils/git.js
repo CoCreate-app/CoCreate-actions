@@ -18,7 +18,7 @@ module.exports.push = function(repository,prompt){
         // add local git config like username and email
         simpleGit.addConfig('user.email',prompt.config_email_git);
         simpleGit.addConfig('user.name',prompt.config_name_git);
-        change_url(simpleGitPromise,gitHubUrl)
+        change_url(simpleGitPromise,gitHubUrl,repository.path)
         // Add all files for commit
         simpleGitPromise.add('.')
             .then(
@@ -34,30 +34,31 @@ module.exports.push = function(repository,prompt){
               (successCommit) => {
                 console.log("************* -> ",successCommit);
              }, (failed) => {
-                console.log('failed commmit');
+                console.log('failed commmit '+repository.repo);
          });
         // Finally push to online repository
         gitHubUrl = `https://${repository.repo}`; 
          simpleGitPromise.push('origin','master')
             .then((success) => {
                console.log("************* -> ",'repo successfully pushed '+repository.path);
-               change_url(simpleGitPromise,gitHubUrl)
+               change_url(simpleGitPromise,gitHubUrl,repository.path)
             },(failed)=> {
                console.log("************* -> ",'repo push failed '+repository.path);
-               change_url(simpleGitPromise,gitHubUrl)
+               change_url(simpleGitPromise,gitHubUrl,repository.path)
          });
         //change_url(simpleGitPromise,gitHubUrl)
 }//end push
 
- function change_url(simpleGitPromise,url){
+ function change_url(simpleGitPromise,url,path){
         
          simpleGitPromise.removeRemote('origin')
             .then(
                (addSuccess) => {
                   //console.log("remove Origin");
                }, (failedAdd) => {
-                  console.log('Remove adding files failed');
+                  console.log('Remove adding files failed',path);
             });
+            //.addRemote('origin',url);
          simpleGitPromise.addRemote('origin',url);
 }
 
@@ -77,16 +78,29 @@ module.exports.pull = function(repository,prompt){
     const simpleGit = git['simpleGit'];
     
     let gitHubUrl = `https://${prompt.user_git}:${prompt.password_git}@${repository.repo}`;
-    change_url(simpleGitPromise,gitHubUrl)
+    
+    let change_gitHubUrl = `https://${repository.repo}`; 
+    
+    simpleGit
+    .removeRemote('origin')
+    .addRemote('origin',gitHubUrl)
+    .push(['origin', 'master'], () => {
+        console.log("PULL SUCCESSFULL "+repository.path)
+    }).removeRemote('origin')
+    .addRemote('origin',change_gitHubUrl)
+    
+    /*
+    change_url(simpleGitPromise,gitHubUrl,repository.path)
     gitHubUrl = `https://${repository.repo}`; 
     simpleGitPromise.pull('origin','master')
         .then((success) => {
            console.log("************* -> ",'Pull repo successfully  '+repository.path);
-           change_url(simpleGitPromise,gitHubUrl);
+           change_url(simpleGitPromise,gitHubUrl,repository.path);
         },(failed)=> {
-           console.log("************* -> ",'Pull repo failed '+repository.path);
-           change_url(simpleGitPromise,gitHubUrl);
+           console.log(":( :( ;( -> ",'Pull repo failed '+repository.path);
+           change_url(simpleGitPromise,gitHubUrl,repository.path);
      });
+     */
 }
 
 module.exports.initRepository = function(repository,prompt){
@@ -104,6 +118,6 @@ module.exports.initRepository = function(repository,prompt){
      .push(['-u', 'origin', 'master'], () => {
          console.log('Done ',repository.repo);
          gitHubUrl = `https://${repository.repo}`; 
-         change_url(simpleGit,gitHubUrl);
+         change_url(simpleGit,gitHubUrl,repository.path);
      });
 }

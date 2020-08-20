@@ -19,7 +19,7 @@ module.exports = [
             'path':'../CoCreate-documentation',
             'repo' : 'github.com/CoCreate-app/CoCreate-documentation.git'
         },
-        
+  
 // Components        
         {
             'path':'../CoCreate-components/CoCreate-action',
@@ -126,8 +126,8 @@ module.exports = [
             'repo' : 'github.com/CoCreate-app/CoCreate-modal.git'
         },
         {
-            'path':'../CoCreate-components/CoCreate-overylay-scroll',
-            'repo' : 'github.com/CoCreate-app/CoCreate-overylay-scroll.git'
+            'path':'../CoCreate-components/CoCreate-overlay-scroll',
+            'repo' : 'github.com/CoCreate-app/CoCreate-overlay-scroll.git'
         },
         {
             'path':'../CoCreate-components/CoCreate-parallax',
@@ -169,13 +169,14 @@ module.exports = [
             'path':'../CoCreate-components/CoCreate-storage',
             'repo' : 'github.com/CoCreate-app/CoCreate-storage.git'
         },
+        
         {
             'path':'../CoCreate-components/CoCreate-text',
             'repo' : 'github.com/CoCreate-app/CoCreate-text.git'
         },
         {
-            'path':'../CoCreate-components/CoCreate-toggle-classes',
-            'repo' : 'github.com/CoCreate-app/CoCreate-toggle-classes.git'
+            'path':'../CoCreate-components/CoCreate-toggle',
+            'repo' : 'github.com/CoCreate-app/CoCreate-toggle.git'
         },
         {
             'path':'../CoCreate-components/CoCreate-users',
@@ -278,5 +279,5 @@ module.exports = [
             'repo' : 'github.com/CoCreate-app/CoCreate-select2.git'
         },
 
-    
+ 
 ]
