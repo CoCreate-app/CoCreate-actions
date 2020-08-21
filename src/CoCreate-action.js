@@ -8,7 +8,6 @@ const CoCreateAction = {
   
   completedEventName: 'completedEvent',
   
-  
   init: function(container) {
     
     const __container = container || document
