@@ -15,8 +15,9 @@ module.exports.push = function(repository,prompt){
         const simpleGit = git['simpleGit'];
         // [Repo name] Set up GitHub url like this so no manual entry of user pass needed
         let gitHubUrl = `https://${prompt.user_git}:${prompt.password_git}@${repository.repo}`;
+        let change_gitHubUrl = `https://${repository.repo}`; 
         // add local git config like username and email
-        simpleGit.addConfig('user.email',prompt.config_email_git);
+/*        simpleGit.addConfig('user.email',prompt.config_email_git);
         simpleGit.addConfig('user.name',prompt.config_name_git);
         change_url(simpleGitPromise,gitHubUrl,repository.path)
         // Add all files for commit
@@ -47,6 +48,24 @@ module.exports.push = function(repository,prompt){
                change_url(simpleGitPromise,gitHubUrl,repository.path)
          });
         //change_url(simpleGitPromise,gitHubUrl)
+        
+        */
+        
+        simpleGit
+        .addConfig('user.email',prompt.config_email_git)
+        .addConfig('user.name',prompt.config_name_git)
+        .removeRemote('origin')
+        .addRemote('origin',gitHubUrl)
+        .pull(['origin', 'master'], () => {
+            //console.log("PULL Before PULL SUCCESSFULL "+repository.path)
+        })
+        .add('./*')
+        .commit(prompt.commit_git)
+        .push(['-u', 'origin', 'master'], () => {
+         console.log('Done ',repository.path);
+        })
+        .removeRemote('origin')
+        .addRemote('origin',change_gitHubUrl)
 }//end push
 
  function change_url(simpleGitPromise,url,path){
@@ -84,7 +103,7 @@ module.exports.pull = function(repository,prompt){
     simpleGit
     .removeRemote('origin')
     .addRemote('origin',gitHubUrl)
-    .push(['origin', 'master'], () => {
+    .pull(['origin', 'master'], () => {
         console.log("PULL SUCCESSFULL "+repository.path)
     }).removeRemote('origin')
     .addRemote('origin',change_gitHubUrl)
