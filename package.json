@@ -5,7 +5,14 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+<<<<<<< HEAD
     "start":"node app.js"
+=======
+    "push": "node commands/push.js",
+    "pull": "node commands/pull.js",
+    "init": "node commands/init.js",
+    "clone": "node commands/clone.js"
+>>>>>>> 3c7cc3e6164d83d8737969844904591e49e85e21
   },
   "repository": {
     "type": "git",
