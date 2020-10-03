@@ -1,24 +1,20 @@
 {
-  "name": "cocreate-push-all-repositories",
+  "name": "CoCreate-action",
   "version": "1.0.0",
-  "description": "Do it push, all repositories Cocreate",
-  "main": "index.js",
+  "description": "",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "push": "node commands/push.js",
-    "pull": "node commands/pull.js",
-    "init": "node commands/init.js"
+    "start":"node app.js"
   },
-  "keywords": [
-    "push",
-    "github"
-  ],
-  "author": "jeanmendozar@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoCreate-app/CoCreate-action.git"
+  },
+  "author": "Frank Pagan",
   "license": "ISC",
-  "dependencies": {
-    "child_process": "^1.0.2",
-    "prompt": "^1.0.0",
-    "shelljs": "^0.8.4",
-    "simple-git": "^2.12.0"
-  }
+  "bugs": {
+    "url": "https://github.com/CoCreate-app/CoCreate-action/issues"
+  },
+  "homepage": "https://github.com/CoCreate-app/CoCreate-action#readme"
 }

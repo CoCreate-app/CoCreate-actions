@@ -1,2 +1,3 @@
 # ignore  app.js
-test
+app.js
+package-lock.json
