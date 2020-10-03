@@ -1,6 +1,7 @@
 module.exports = [
         {
-            'path':'../ListRepositories/CoCreate-actions',
+            'path':'../ListRepositories',
             'repo' : 'github.com/CoCreate-app/CoCreate-actions.git'
         },
+
 ]

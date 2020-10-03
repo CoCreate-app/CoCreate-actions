@@ -140,3 +140,20 @@ module.exports.initRepository = function(repository,prompt){
          change_url(simpleGit,gitHubUrl,repository.path);
      });
 }
+
+
+
+module.exports.cloneRepository = function(repository,prompt){
+    console.log("Clone Repository ",repository.repo)
+
+    let gitHubUrl = `https://${prompt.user_git}:${prompt.password_git}@${repository.repo}`;
+    const git = init(repository.path);
+    const simpleGit = git['simpleGit'];
+    
+    simpleGit.silent(true)
+      .clone(gitHubUrl)
+      .then(() => console.log('finished Clone'))
+      .catch((err) => console.error('failed Clone: ', err));
+      
+
+}
