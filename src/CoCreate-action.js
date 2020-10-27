@@ -32,6 +32,7 @@ const CoCreateAction = {
 	  }
 
     btn.addEventListener('click', function(event) {
+      event.preventDefault();
       let actions = this.getAttribute(_this.attribute) || "";
       actions = actions.replace(/\s/g, '').split(',');
       _this.stageIndex = 0;
@@ -72,11 +73,11 @@ const CoCreateAction = {
     //. register events
     const _this = this;
     document.addEventListener(endEvent, function(e) {
-      _this.__nextAction(endEvent)
+      _this.__nextAction(endEvent, e.detail)
     });
   },
   
-  __runActionFunc: function() {
+  __runActionFunc: function(data) {
 
     if (this.stageIndex >= this.selectedStage.length) {
 
@@ -91,11 +92,11 @@ const CoCreateAction = {
     //. run function
     const action = this.actions[key];
     if (action && action.runFunc) {
-      action.runFunc.call(action.instance, this.selectedElement);
+      action.runFunc.call(action.instance, this.selectedElement, data);
     }
   },
   
-  __nextAction: function(eventName) {
+  __nextAction: function(eventName, data) {
     const key = this.selectedStage[this.stageIndex];
     if (!key) {
       return ;
@@ -104,7 +105,7 @@ const CoCreateAction = {
       return;
     }
     this.stageIndex ++;
-    this.__runActionFunc();
+    this.__runActionFunc(data);
   },
   
   __runAtag: function(button) {
