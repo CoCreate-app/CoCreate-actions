@@ -1,7 +1,7 @@
-![GitHub file size in bytes](https://img.shields.io/github/size/CoCreate-app/CoCreate-boilerplate/dist/CoCreate-boilerplate.min.js?label=minified%20size) 
-![GitHub package.json version](https://img.shields.io/github/package-json/v/CoCreate-app/CoCreate-boilerplate)
-![GitHub](https://img.shields.io/github/license/CoCreate-app/CoCreate-boilerplate) 
-![GitHub labels](https://img.shields.io/github/labels/CoCreate-app/CoCreate-boilerplate/help%20wanted)
+![GitHub file size in bytes](https://img.shields.io/github/size/CoCreate-app/CoCreate-actions/dist/CoCreate-actions.min.js?label=minified%20size&style=for-the-badge) 
+![GitHub package.json version](https://img.shields.io/github/package-json/v/CoCreate-app/CoCreate-actions?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/CoCreate-app/CoCreate-actions?style=for-the-badge) 
+![GitHub labels](https://img.shields.io/github/labels/CoCreate-app/CoCreate-actions/help%20wanted?style=for-the-badge)
 
 # CoCreate-actions
 A simple HTML5 and pure javascript component. Easy configuration using data-attributes and highly styleable.
@@ -27,12 +27,12 @@ We appreciate your continued support, thank you!
 <a name="announcements"></a>
 # Announcements
 
-All updates to this library are documented in our [CHANGELOG](https://github.com/CoCreate-app/CoCreate-industry/blob/master/CHANGELOG.md) and [releases](https://github.com/CoCreate-app/CoCreate-actions/releases). You may also subscribe to email for releases and breaking changes. 
+All updates to this library are documented in our [CHANGELOG](https://github.com/CoCreate-app/CoCreate-actions/blob/master/CHANGELOG.md) and [releases](https://github.com/CoCreate-app/CoCreate-actions/releases). You may also subscribe to email for releases and breaking changes. 
 
 <a name="roadmap"></a>
 # Roadmap
 
-If you are interested in the future direction of this project, please take a look at our open [issues](https://github.com/CoCreate-app/CoCreate-industry/issues) and [pull requests](https://github.com/CoCreate-app/CoCreate-industry/pulls). We would love to hear your feedback.
+If you are interested in the future direction of this project, please take a look at our open [issues](https://github.com/CoCreate-app/CoCreate-actions/issues) and [pull requests](https://github.com/CoCreate-app/CoCreate-actions/pulls). We would love to hear your feedback.
 
 
 <a name="about"></a>
@@ -47,7 +47,7 @@ CoCreate-actions is maintained and funded by CoCreate. The names and logos for C
 <a name="contribute"></a>
 # How to Contribute
 
-We encourage contribution to our libraries (you might even score some nifty swag), please see our [CONTRIBUTING](https://github.com/CoCreate-app/CoCreate-industry/blob/master/CONTRIBUTING.md) guide for details.
+We encourage contribution to our libraries (you might even score some nifty swag), please see our [CONTRIBUTING](https://github.com/CoCreate-app/CoCreate-actions/blob/master/CONTRIBUTING.md) guide for details.
 
 # License
-[The MIT License (MIT)](https://github.com/CoCreate-app/CoCreate-industry/blob/master/LICENSE)
+[The MIT License (MIT)](https://github.com/CoCreate-app/CoCreate-actions/blob/master/LICENSE)

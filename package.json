@@ -1,27 +1,33 @@
 {
-  "name": "CoCreate-action",
-  "version": "1.0.0",
+  "name": "CoCreate-actions",
+  "version": "0.1.0",
   "description": "",
-  "main": "app.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-<<<<<<< HEAD
-    "start":"node app.js"
-=======
-    "push": "node commands/push.js",
-    "pull": "node commands/pull.js",
-    "init": "node commands/init.js",
-    "clone": "node commands/clone.js"
->>>>>>> 3c7cc3e6164d83d8737969844904591e49e85e21
+    "start": "npx webpack --config webpack.config.js --watch",
+    "build": "NODE_ENV=production npx webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CoCreate-app/CoCreate-action.git"
+    "url": "git+https://github.com/CoCreate-app/CoCreate-actions.git"
   },
-  "author": "Frank Pagan",
-  "license": "ISC",
+  "author": "CoCreate LLC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CoCreate-app/CoCreate-action/issues"
+    "url": "https://github.com/CoCreate-app/CoCreate-actions/issues"
   },
-  "homepage": "https://github.com/CoCreate-app/CoCreate-action#readme"
+  "homepage": "https://github.com/CoCreate-app/CoCreate-actions#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^4.5.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.3.0",
+    "webpack-log": "^3.0.1"
+  },
+  "dependencies": {
+  }
 }

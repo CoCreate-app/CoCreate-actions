@@ -7,41 +7,64 @@ const CoCreateAction = {
   selectedElement: null,
   
   completedEventName: 'completedEvent',
-  
-  init: function(container) {
-    
-    const __container = container || document
-    if (!__container.querySelectorAll) {
-			return;
-		}
-		
-		let buttons = __container.querySelectorAll("[data-actions]");
-
-		for (let i = 0; i < buttons.length; i++) {
-		  this.actionButtonEvent(buttons[i]);
-		}
+  init: function() {
+    this.actionButtonEvent()
   },
-  
-  actionButtonEvent: function(btn) {
-    const _this = this;    
-	  let checkActions = btn.getAttribute('data-actions') || "";
-	  checkActions = checkActions.replace(/\s/g, '').split(',');
-	  
-	  if (checkActions.length == 0) {
-	    return;
-	  }
+  // init: function(container) {
+    
+  //   const __container = container || document
+  //   if (!__container.querySelectorAll) {
+		// 	return;
+		// }
+		
+		// let buttons = __container.querySelectorAll("[data-actions]");
 
-    btn.addEventListener('click', function(event) {
+		// for (let i = 0; i < buttons.length; i++) {
+		//   this.actionButtonEvent(buttons[i]);
+		// }
+  // },
+  
+  // actionButtonEvent: function(btn) {
+  //   const _this = this;    
+	 // let checkActions = btn.getAttribute('data-actions') || "";
+	 // checkActions = checkActions.replace(/\s/g, '').split(',');
+	  
+	 // if (checkActions.length == 0) {
+	 //   return;
+	 // }
+
+  //   btn.addEventListener('click', function(event) {
+  //     event.preventDefault();
+  //     let actions = this.getAttribute(_this.attribute) || "";
+  //     actions = actions.replace(/\s/g, '').split(',');
+  //     _this.stageIndex = 0;
+  //     _this.selectedStage = actions;
+      
+  //     //. run function
+  //     _this.selectedElement = btn;
+  //     _this.__runActionFunc();
+      
+  //   })
+  // },
+  
+  actionButtonEvent: function() {
+    const self = this;
+    document.addEventListener('click', function(event) {
+      let btn = event.target;
+      if (!btn.getAttribute('data-actions')) {
+        btn = event.target.closest('[data-actions]');
+      }
+      if (!btn) return;
       event.preventDefault();
-      let actions = this.getAttribute(_this.attribute) || "";
-      actions = actions.replace(/\s/g, '').split(',');
-      _this.stageIndex = 0;
-      _this.selectedStage = actions;
+
+      let actions = (btn.getAttribute(self.attribute) || "").replace(/\s/g, '').split(',');
+      if (actions.length == 0) return;
+      self.stageIndex = 0;
+      self.selectedStage = actions;
       
       //. run function
-      _this.selectedElement = btn;
-      _this.__runActionFunc();
-      
+      self.selectedElement = btn;
+      self.__runActionFunc();
     })
   },
   
@@ -91,8 +114,12 @@ const CoCreateAction = {
     const key = this.selectedStage[this.stageIndex];
     //. run function
     const action = this.actions[key];
-    if (action && action.runFunc) {
-      action.runFunc.call(action.instance, this.selectedElement, data);
+    if (action) {
+      if (action.runFunc) {
+        action.runFunc.call(action.instance, this.selectedElement, data);
+      } else {
+        this.__nextAction(action.endEvent, {});
+      }
     }
   },
   
