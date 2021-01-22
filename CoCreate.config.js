@@ -11,18 +11,12 @@ module.exports = {
     sources: [{
             path: "./docs/index.html",
             collection: "website-pages",
-            document_id: "5f08bf3da588c11bf8ead4b3",
-            name: "html",
-        },
-        {
-            collection: "routes",
             document_id: "",
-            domains: ["cocreate.app"],
-            route: "/docs/actions",
+            name: "html",
         }
     ],
 
-    directory: "./test_files/",
+    directory: "./src",
     extensions: [
         "js",
         "css",
