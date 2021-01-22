@@ -1,6 +1,6 @@
 {
   "name": "@cocreate/actions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple HTML5 and pure javascript component. Easy configuration using data-attributes and/or JavaScript API. Highly customizable and styleable.",
   "keywords": [
     "cocreate",
