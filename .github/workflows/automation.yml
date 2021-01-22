@@ -58,9 +58,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-          
-      - run: yarn install --frozen-lockfile
-      - run: yarn build
       
       - name: upload cdn
         uses: CoCreate-app/CoCreate-s3@master
