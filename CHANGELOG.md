@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.0.1...v1.0.2) (2021-01-22)
+
+
+### Bug Fixes
+
+* (improved chaining events) ([1a4f61f](https://github.com/CoCreate-app/CoCreate-actions/commit/1a4f61fa534857fe653f9130373501894155b732))
+
 ## [1.0.1](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.0.0...v1.0.1) (2021-01-22)
 
 
