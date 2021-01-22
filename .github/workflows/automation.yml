@@ -24,6 +24,7 @@ jobs:
         with:
           direction: overwrite-github # default is overwrite-file
           githubToken: ${{ secrets.GITHUB }}
+  
   ci:
     runs-on: ubuntu-latest
     steps:
@@ -42,17 +43,24 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}  # Auto Changog generator
-        
-        
-        
            
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: update documentation
+        uses: CoCreate-app/CoCreate-docs@master
+          
+  
   cdn:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
           
-      - run: yarn install --frozen-lockfile
+      - run: yarn install
       - run: yarn build
 
       - uses: CoCreate-app/CoCreate-s3@master
@@ -60,7 +68,3 @@ jobs:
           aws-key-id: ${{ secrets.AWSACCESSKEYID }}
           aws-access-key: ${{ secrets.AWSSECERTACCESSKEY }}
           source: './dist/CoCreate-styles.min.js'
-      
-      - name: update documentation
-        uses: CoCreate-app/CoCreate-docs@master
-        
