@@ -144,4 +144,6 @@ const CoCreateAction = {
   }
 }
 
+export default CoCreateAction;
+
 CoCreateAction.init();

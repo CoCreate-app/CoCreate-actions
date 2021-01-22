@@ -1,6 +1,6 @@
 module.exports = {
   dryRun: false,
-  branches: ["main", "dev"],
+  branches: ["master"],
   plugins: [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
@@ -15,7 +15,7 @@ module.exports = {
     [
       "@semantic-release/git",
       {
-        assets: ["CHANGELOG.md"],
+        assets: ["CHANGELOG.md", "package.json"],
       },
     ],
   ],

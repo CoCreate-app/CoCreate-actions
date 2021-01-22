@@ -1,11 +1,15 @@
 {
-  "name": "CoCreate-actions",
-  "version": "0.1.0",
-  "description": "",
-  "main": "src/index.js",
+  "name": "@CoCreate/actions",
+  "version": "1.0.0",
+  "description": "A simple HTML5 and pure javascript component. Easy configuration using data-attributes and/or JavaScript API. Highly customizable and styleable.",
+  "keywords": ["cocreate","no-code-framework","cocreatejs","cocreatejs-component","cocreate-framework","no-code","low-code","collaborative-framework","realtime","realtime-framework","collaboration","shared-editing","html5-framework","javascript-framework"],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "npx webpack --config webpack.config.js --watch",
-    "build": "NODE_ENV=production npx webpack --config webpack.config.js"
+    "build": "NODE_ENV=production npx webpack --config webpack.config.js",
+    "docs": "node ./node_modules/@cocreate/docs/src/index.js"
   },
   "repository": {
     "type": "git",
@@ -16,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/CoCreate-app/CoCreate-actions/issues"
   },
-  "homepage": "https://github.com/CoCreate-app/CoCreate-actions#readme",
+  "homepage": "https://cocreate.app/docs/actions",
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
@@ -24,10 +28,12 @@
     "clean-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^4.5.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "^5.11.0",
-    "webpack-cli": "^4.3.0",
+    "webpack": "^5.14.0",
+    "webpack-cli": "^4.3.1",
     "webpack-log": "^3.0.1"
   },
+
   "dependencies": {
+    "@cocreate/docs": "^1.0.3"
   }
 }
