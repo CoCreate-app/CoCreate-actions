@@ -1,5 +1,5 @@
 # CoCreate-actions
-A simple HTML5 and pure javascript component. Easy configuration using data-attributes and highly styleable.
+A simple actions component in vanilla javascript. Chain multiple functions and execute in a specified order. Easily configured using HTML5 data-attributes and/or JavaScript API. Take it for a spin in our [playground!](https://cocreate.app/docs/actions)
 
 ![GitHub file size in bytes](https://img.shields.io/github/size/CoCreate-app/CoCreate-actions/dist/CoCreate-actions.min.js?label=minified%20size&style=for-the-badge) 
 ![GitHub latest release](https://img.shields.io/github/v/release/CoCreate-app/CoCreate-actions?style=for-the-badge)
