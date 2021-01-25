@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.0.2...v1.0.3) (2021-01-25)
+
+
+### Bug Fixes
+
+* init by observer and worflow ([3e1bd72](https://github.com/CoCreate-app/CoCreate-actions/commit/3e1bd7271a98dcf6b4559b765d1c77f20c649a87))
+
 ## [1.0.2](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.0.1...v1.0.2) (2021-01-22)
 
 
