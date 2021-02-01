@@ -54,7 +54,7 @@ module.exports = [
             'repo' : 'github.com/CoCreate-app/CoCreate-cursors.git'
         },
         {
-            'path':'../CoCreate-components/CoCreate-dnd',
+            'path':'../CoCreate-components/builder-prerequisite/CoCreate-dnd',
             'repo' : 'github.com/CoCreate-app/CoCreate-dnd.git'
         },
         {
@@ -187,7 +187,7 @@ module.exports = [
             'repo' : 'github.com/CoCreate-app/CoCreate-uuid.git'
         },
         {
-            'path':'../CoCreate-components/CoCreate-vdom',
+            'path':'../CoCreate-components/builder-prerequisite/CoCreate-vdom',
             'repo' : 'github.com/CoCreate-app/CoCreate-vdom.git'
         },
         {
