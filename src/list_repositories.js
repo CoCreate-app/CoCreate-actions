@@ -1,28 +1,6 @@
 module.exports = [
         {
-            'path':'../CoCreate-adminUI',
-            'repo' : 'github.com/CoCreate-app/CoCreate-adminUI.git'
-        },
-        {
-            'path':'../CoCreateCSS',
-            'repo' : 'github.com/CoCreate-app/CoCreateCSS.git'
-        },
-        {
-            'path':'../CoCreateJS',
-            'repo' : 'github.com/CoCreate-app/CoCreateJS.git'
-        },
-        {
-            'path':'../CoCreate-repositories',
-            'repo' : 'github.com/CoCreate-app/CoCreate-repositories.git'
-        },
-        {
-            'path':'../CoCreate-documentation',
-            'repo' : 'github.com/CoCreate-app/CoCreate-documentation.git'
-        },
-  
-// Components        
-        {
-            'path':'../CoCreate-components/CoCreate-action',
+            'path':'../ListRepositories/CoCreate-actions',
             'repo' : 'github.com/CoCreate-app/CoCreate-actions.git'
         },
         {

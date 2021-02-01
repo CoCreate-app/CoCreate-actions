@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "push": "node commands/push.js",
     "pull": "node commands/pull.js",
-    "init": "node commands/init.js"
+    "init": "node commands/init.js",
+    "clone": "node commands/clone.js"
   },
   "keywords": [
     "push",

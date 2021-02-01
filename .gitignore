@@ -1,2 +1,7 @@
 # ignore  app.js
+<<<<<<< HEAD
 test
+=======
+app.js
+package-lock.json
+>>>>>>> 5bac0ad9a5532a911268b195f3469a590ff451da

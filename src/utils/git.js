@@ -140,3 +140,43 @@ module.exports.initRepository = function(repository,prompt){
          change_url(simpleGit,gitHubUrl,repository.path);
      });
 }
+
+
+
+module.exports.cloneRepository = function(repository,prompt){
+    console.log("Clone Repository ",repository.repo)
+
+    let gitHubUrl_repo = `https://${prompt.user_git}:${prompt.password_git}@${repository.repo}`;
+    const git = init(repository.path);
+    const simpleGit = git['simpleGit'];
+    let folder_list_repo = process.cwd()
+    let gitHubUrl = `https://${repository.repo}`; 
+    
+    
+    
+    simpleGit.silent(true)
+      .clone(gitHubUrl_repo,()=>{
+          let folder_repo = repository.repo.split('/')[2].split('.git')[0]
+          let new_repo = folder_list_repo+'/'+folder_repo
+          shellJs.cd(folder_list_repo+'/'+folder_repo);
+          console.log("Process ",process.cwd())
+          console.log("Clone")
+             const git = init(new_repo);
+            const simpleGit = git['simpleGit'];
+            simpleGit.removeRemote('origin')
+          .addRemote('origin',gitHubUrl)
+      })
+      /*.then(() => {
+          gitHubUrl = `https://${repository.repo}`; 
+          let folder_repo = repository.repo.split('/')[2].split('.git')[0]
+          shellJs.cd(folder_list_repo+'/'+folder_repo);
+          console.log("Process ",process.cwd())
+          simpleGit.removeRemote('origin')
+          .addRemote('origin',gitHubUrl)
+          console.log('finished Clone')
+      }).catch((err) => {console.error('failed Clone: ', err)})*/
+      
+      
+      
+
+}
