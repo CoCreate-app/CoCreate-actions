@@ -1,5 +1,5 @@
 // -testing1
-const actions = {
+const CoCreateAction = {
   attribute: 'data-actions',
   actions: {},
   selectedStage: [],
@@ -145,6 +145,6 @@ const actions = {
 }
 
 
-actions.init();
+CoCreateAction.init();
 
-export default actions;
+export default CoCreateAction;
