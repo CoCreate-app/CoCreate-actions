@@ -7,6 +7,7 @@ const CoCreateAction = {
   selectedElement: null,
   
   completedEventName: 'completedEvent',
+  
   init: function() {
     this.actionButtonEvent()
   },
@@ -68,6 +69,10 @@ const CoCreateAction = {
     })
   },
   
+  add: function({action, callback, endEvent}) {
+    this.registerEvent(action, callback, null, endEvent);
+  },
+  
   /**
    * key: string
    * runFunc: function
@@ -116,7 +121,7 @@ const CoCreateAction = {
     const action = this.actions[key];
     if (action) {
       if (action.runFunc) {
-        action.runFunc.call(action.instance, this.selectedElement, data);
+        action.runFunc.call(null, this.selectedElement, data);
       } else {
         this.__nextAction(action.endEvent, {});
       }
@@ -139,7 +144,7 @@ const CoCreateAction = {
     var aTag = button.querySelector('a');
           
     if (aTag) {
-      CoCreateLogic.setLinkProcess(aTag)
+      CoCreate.logic.setLinkProcess(aTag)
     }
   }
 }

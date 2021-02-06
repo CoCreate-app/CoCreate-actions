@@ -120,9 +120,9 @@
         }, 2000)
       }
       
-      CoCreateAction.registerEvent('s1', S1Action, window, 's1')
-      CoCreateAction.registerEvent('s2', S2Action, window, 's2')
-      CoCreateAction.registerEvent('s3', S3Action, window, 's2')
+      CoCreate.actions.registerEvent('s1', S1Action, window, 's1')
+      CoCreate.actions.registerEvent('s2', S2Action, window, 's2')
+      CoCreate.actions.registerEvent('s3', S3Action, window, 's2')
       
       // document.addEventListener('registerBtnEndEvent', function(e) {
       //   CoCreateAction.fireEndEvent('registeBtn');
