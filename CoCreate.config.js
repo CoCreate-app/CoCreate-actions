@@ -12,7 +12,7 @@ module.exports = {
             document_id: "60145dc49f64ba1680b86693",
             key: "html",
             data:{
-                name: "Actions Doc",
+                name: "Action Doc",
             }
         },
     ],
@@ -25,7 +25,7 @@ module.exports = {
                 document_id: "60145dc49f64ba1680b86693",
                 name: "html",
                 domains: ["cocreate.app", "server.cocreate.app", "ws.cocreate.app"],
-                route: "/docs/actions",
+                route: "/docs/action",
             }
         }
     ],

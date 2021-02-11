@@ -1,9 +1,9 @@
 {
-  "name": "@cocreate/actions",
+  "name": "@cocreate/action",
   "version": "1.0.3",
-  "description": "A simple actions component in vanilla javascript. Chain multiple functions and execute in a specified order. Easily configured using HTML5 data-attributes and/or JavaScript API.",
+  "description": "A simple action component in vanilla javascript. Chain multiple functions and execute in a specified order. Easily configured using HTML5 data-attributes and/or JavaScript API.",
   "keywords": [
-    "actions",
+    "action",
     "chain-functions",
     "cocreate",
     "low-code-framework",
@@ -31,14 +31,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CoCreate-app/CoCreate-actions.git"
+    "url": "git+https://github.com/CoCreate-app/CoCreate-action.git"
   },
   "author": "CoCreate LLC",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CoCreate-app/CoCreate-actions/issues"
+    "url": "https://github.com/CoCreate-app/CoCreate-action/issues"
   },
-  "homepage": "https://cocreate.app/docs/actions",
+  "homepage": "https://cocreate.app/docs/action",
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",

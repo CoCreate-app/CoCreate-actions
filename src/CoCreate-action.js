@@ -8,7 +8,7 @@ const CoCreateAction = {
   
   completedEventName: 'completedEvent',
   
-  init: function() {
+  __init: function() {
     this.actionButtonEvent()
   },
   // init: function(container) {
@@ -69,7 +69,7 @@ const CoCreateAction = {
     })
   },
   
-  add: function({action, callback, endEvent}) {
+  init: function({action, callback, endEvent}) {
     this.registerEvent(action, callback, null, endEvent);
   },
   
@@ -150,6 +150,6 @@ const CoCreateAction = {
 }
 
 
-CoCreateAction.init();
+CoCreateAction.__init();
 
 export default CoCreateAction;

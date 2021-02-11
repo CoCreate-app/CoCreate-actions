@@ -12,7 +12,7 @@ module.exports = {
 
   // Path to your entry point. From this file Webpack will begin his work
   entry: {
-    'CoCreate-actions': './src/CoCreate-actions.js',
+    'CoCreate-action': './src/CoCreate-action.js',
   },
 
  // Path and filename of your result bundle.
@@ -22,7 +22,7 @@ module.exports = {
     filename: isProduction ? '[name].min.js' : '[name].js',
     libraryTarget: 'umd',
     libraryExport: 'default',
-    library: ['CoCreate', 'actions'],
+    library: ['CoCreate', 'action'],
     globalObject: "this",
   },
 

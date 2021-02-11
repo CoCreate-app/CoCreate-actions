@@ -1,4 +1,4 @@
-# Contributing to CoCreate-actions
+# Contributing to CoCreate-action
 
 This project is work of [many contributors](https://github.com/CoCreate-app/CoCreate-action/graphs/contributors).
 You're encouraged to submit [pull requests](https://github.com/CoCreate-app/CoCreate-action/pulls),
@@ -8,12 +8,12 @@ In the examples below, substitute your Github username for `contributor` in URLs
 
 ## Fork the Project
 
-Fork the [project on Github](https://github.com/CoCreate-app/CoCreate-actions) and check out your copy.
+Fork the [project on Github](https://github.com/CoCreate-app/CoCreate-action) and check out your copy.
 
 ```
-git clone https://github.com/contributor/CoCreate-actions.git
-cd CoCreate-actions
-git remote add upstream https://github.com/CoCreate-app/CoCreate-actions.git
+git clone https://github.com/contributor/CoCreate-action.git
+cd CoCreate-action
+git remote add upstream https://github.com/CoCreate-app/CoCreate-action.git
 ```
 
 ## Create a Topic Branch

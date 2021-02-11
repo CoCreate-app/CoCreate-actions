@@ -64,4 +64,4 @@ jobs:
         with:
           aws-key-id: ${{ secrets.AWSACCESSKEYID }}
           aws-access-key: ${{ secrets.AWSSECERTACCESSKEY }}
-          source: './dist/CoCreate-actions.min.js'
+          source: './dist/CoCreate-action.min.js'

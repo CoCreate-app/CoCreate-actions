@@ -69,7 +69,7 @@
     
       <form>
         
-        <button type="button" data-actions="s1, s2, s3, s1">click<a href="test.html"></a></button>
+        <button type="button" data-action="s1, s2, s3, s1">click<a href="test.html"></a></button>
     
       </form>
     </div>
@@ -120,9 +120,9 @@
         }, 2000)
       }
       
-      CoCreate.actions.registerEvent('s1', S1Action, window, 's1')
-      CoCreate.actions.registerEvent('s2', S2Action, window, 's2')
-      CoCreate.actions.registerEvent('s3', S3Action, window, 's2')
+      CoCreate.action.registerEvent('s1', S1Action, window, 's1')
+      CoCreate.action.registerEvent('s2', S2Action, window, 's2')
+      CoCreate.action.registerEvent('s3', S3Action, window, 's2')
       
       // document.addEventListener('registerBtnEndEvent', function(e) {
       //   CoCreateAction.fireEndEvent('registeBtn');
