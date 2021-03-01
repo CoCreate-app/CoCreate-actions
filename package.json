@@ -1,25 +1,34 @@
 {
-  "name": "cocreate-push-all-repositories",
+  "name": "@cocreate/repositories",
   "version": "1.0.0",
-  "description": "Do it push, all repositories Cocreate",
-  "main": "index.js",
+  "description": "A simple repositories component in vanilla javascript. Easily configured using HTML5 data-attributes and/or JavaScript API.",
+  "keywords": ["repositories","cocreate","low-code-framework","no-code-framework","cocreatejs","cocreatejs-component","cocreate-framework","no-code","low-code","collaborative-framework","realtime","realtime-framework","collaboration","shared-editing","html5-framework","javascript-framework"],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "push": "node commands/push.js",
-    "pull": "node commands/pull.js",
-    "init": "node commands/init.js",
-    "clone": "node commands/clone.js"
+    "push": "node src/commands/push.js",
+    "pull": "node src/commands/pull.js",
+    "init": "node src/commands/init.js",
+    "clone": "node src/commands/clone.js"
   },
-  "keywords": [
-    "push",
-    "github"
-  ],
-  "author": "jeanmendozar@gmail.com",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoCreate-app/CoCreate-repositories.git"
+  },
+  "author": "CoCreate LLC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CoCreate-app/CoCreate-repositories/issues"
+  },
+  "homepage": "https://cocreate.app/docs/repositories",
+
   "dependencies": {
     "child_process": "^1.0.2",
     "prompt": "^1.0.0",
     "shelljs": "^0.8.4",
-    "simple-git": "^2.12.0"
+    "simple-git": "^2.12.0",
+    "@cocreate/docs": "^1.0.3"
   }
 }

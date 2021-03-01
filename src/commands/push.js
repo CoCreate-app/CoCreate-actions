@@ -11,6 +11,7 @@ prompt.start();
 const properties = [
     {
         name: 'commit_git',
+        default: 'Push Automatict cocreate',
     },
     {
         name: 'config_email_git',
@@ -24,7 +25,15 @@ const properties = [
     {
         name: 'password_git',
         hidden: true
-    }
+    },
+    {
+        name: 'pull_branch',
+        default: 'dev',
+    },
+    {
+        name: 'push_branch',
+        default: 'dev',
+    },
 ];
 
 prompt.get(properties,  function (err, result) {

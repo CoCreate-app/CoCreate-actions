@@ -56,12 +56,12 @@ module.exports.push = function(repository,prompt){
         .addConfig('user.name',prompt.config_name_git)
         .removeRemote('origin')
         .addRemote('origin',gitHubUrl)
-        .pull(['origin', 'master'], () => {
+        .pull(['origin', prompt.pull_branch], () => {
             //console.log("PULL Before PULL SUCCESSFULL "+repository.path)
         })
         .add('./*')
         .commit(prompt.commit_git)
-        .push(['-u', 'origin', 'master'], () => {
+        .push(['-u', 'origin', prompt.push_branch], () => {
          console.log('Done ',repository.path);
         })
         .removeRemote('origin')
