@@ -11,7 +11,9 @@
     "push": "node src/commands/push.js",
     "pull": "node src/commands/pull.js",
     "init": "node src/commands/init.js",
-    "clone": "node src/commands/clone.js"
+    "clone": "node src/commands/clone.js",
+    "merge": "node src/commands/merge.js",
+    "commit": "node src/commands/commit.js"
   },
   "repository": {
     "type": "git",
