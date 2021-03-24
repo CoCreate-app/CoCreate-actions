@@ -269,7 +269,7 @@ module.exports = [
         },
         {
             'path':'../CoCreate-plugins/CoCreate-pintrest',
-            'repo' : 'github.com/CoCreate-app/CoCreate-pintrest.git'
+            'repo' : 'github.com/CoCreate-app/CoCreate-pinterest.git'
         },
         // {
         //     'path':'../CoCreate-plugins/CoCreate-progressbar',
