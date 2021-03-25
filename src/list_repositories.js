@@ -268,7 +268,7 @@ module.exports = [
             'repo' : 'github.com/CoCreate-app/CoCreate-pickr.git'
         },
         {
-            'path':'../CoCreate-plugins/CoCreate-pintrest',
+            'path':'../CoCreate-plugins/CoCreate-pinterest',
             'repo' : 'github.com/CoCreate-app/CoCreate-pinterest.git'
         },
         // {
