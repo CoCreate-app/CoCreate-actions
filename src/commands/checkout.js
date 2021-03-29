@@ -8,14 +8,7 @@ prompt.start();
 
 const properties = [
     {
-        name: 'user_git',
-    },
-    {
-        name: 'password_git',
-        hidden: true
-    },
-    {
-        name: 'pull_branch',
+        name: 'checkout_branch',
         default: 'master',
     }
 ];
@@ -23,8 +16,14 @@ const properties = [
 prompt.get(properties,  function (err, result) {
     if (err) { return console.error(err); }
     let tmp_pwd = process.cwd()
+    let checkout_branch = result.checkout_branch
     list_repositories.forEach(repo=>{
-        shellJs.cd(tmp_pwd);
-        utils_git.pull(repo,result);
+        shellJs.cd(tmp_pwd)
+        shellJs.cd(repo.path);
+        if (shellJs.exec('git checkout '+checkout_branch).code !== 0) {
+          shellJs.echo('Error: Git checkout '+checkout_branch+' failed');
+          shellJs.exit(1);
+        }
+        
     });
 });

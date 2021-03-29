@@ -23,12 +23,12 @@ module.exports.push = function(repository,prompt){
         .addConfig('user.name',prompt.config_name_git)
         .removeRemote('origin')
         .addRemote('origin',gitHubUrl)
-        .pull(['origin', prompt.pull_branch], () => {
+        .pull(['origin', prompt.branch], () => {
             //console.log("PULL Before PULL SUCCESSFULL "+repository.path)
         })
         .add('./*')
         .commit(prompt.commit_git)
-        .push(['-u', 'origin', prompt.push_branch], () => {
+        .push(['-u', 'origin', prompt.branch], () => {
          console.log('Done ',repository.path);
         })
         .removeRemote('origin')
@@ -47,7 +47,7 @@ function change_url(simpleGitPromise,url,path){
  simpleGitPromise.addRemote('origin',url);
 }
 
-module.exports.pull = function(repository,prompt){
+module.exports.pull = async function(repository,prompt){
     console.log("pull GIT ",repository.path)
     const git = init(repository.path);
     const simpleGitPromise = git['simpleGitPromise'];
@@ -56,12 +56,11 @@ module.exports.pull = function(repository,prompt){
     let gitHubUrl = `https://${prompt.user_git}:${prompt.password_git}@${repository.repo}`;
     
     let change_gitHubUrl = `https://${repository.repo}`; 
-    
-    simpleGit
+    await simpleGit
     .removeRemote('origin')
     .addRemote('origin',gitHubUrl)
-    .pull(['origin', 'master'], () => {
-        console.log("PULL SUCCESSFULL "+repository.path)
+    .pull(['origin', prompt.pull_branch], () => {
+        console.log("PULL SUCCESSFULL "+repository.path + ' from branch : '+prompt.pull_branch)
     }).removeRemote('origin')
     .addRemote('origin',change_gitHubUrl)
     

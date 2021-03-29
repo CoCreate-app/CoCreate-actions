@@ -27,9 +27,13 @@ const properties = [
         hidden: true
     },
     {
-        name: 'branch',
+        name: 'pull_branch',
         default: 'dev',
-    }
+    },
+    {
+        name: 'push_branch',
+        default: 'dev',
+    },
 ];
 
 prompt.get(properties,  function (err, result) {
