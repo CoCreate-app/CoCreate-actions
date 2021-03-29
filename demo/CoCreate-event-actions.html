@@ -65,13 +65,13 @@
   			</ul>
       </div>
   
-  		<div data-main_content_id="content">
-    
+  	<div data-main_content_id="content">
+      
       <form>
-        
-        <button type="button" data-action="s1, s2, s3, s1">click<a href="test.html"></a></button>
-    
+        <input data-sendgrid="cnameRecord">
+        <button type="button" id="id-one" data-action="createOrg, createUser, event{updated_by_fetch}, timeout{1000}, renderKey">click</button>
       </form>
+      
     </div>
 
     <script>
@@ -87,54 +87,6 @@
   
     <!--CoCreate Plugins-->
     <script src="https://server.cocreate.app/CoCreate-components/CoCreate-action/src/CoCreate-action.js"></script>
-
-    <script>
-      
-      function S1Action() {
-        console.log("Stage btn 1: runing");
-        setTimeout(function(){
-          console.log("Stage btn 1: end");
-          document.dispatchEvent(new CustomEvent('s1'));
-
-          
-        }, 1000)
-        
-        
-      }
-      
-      function S2Action() {
-        console.log("Stage btn 2: runing");
-        setTimeout(function(){
-          console.log("Stage btn 2: end");
-          document.dispatchEvent(new CustomEvent('s2'));
-          
-        }, 2000)
-      }
-
-
-      function S3Action() {
-        console.log("Stage btn 3: runing");
-        setTimeout(function(){
-          console.log("Stage btn 3: end");
-          document.dispatchEvent(new CustomEvent('s2'));
-        }, 2000)
-      }
-      
-      CoCreate.action.registerEvent('s1', S1Action, window, 's1')
-      CoCreate.action.registerEvent('s2', S2Action, window, 's2')
-      CoCreate.action.registerEvent('s3', S3Action, window, 's2')
-      
-      // document.addEventListener('registerBtnEndEvent', function(e) {
-      //   CoCreateAction.fireEndEvent('registeBtn');
-      // })
-
-      // document.addEventListener('loginBtnEndEvent', function(e) {
-      //   CoCreateAction.fireEndEvent('loginBtn');
-      // })
-      
-      
-      
-    </script>
 
   </body>
 </html>

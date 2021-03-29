@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
   </head>
   
-  <body>
+  <body id="test">
     
    <!--<a href="login.html" target="" data-pass_to="me1234" class="redirectLink" style="display: none"></a>-->
     <div id="modal-viewport" class="hidden"></div>
@@ -69,18 +69,21 @@
     
       <form>
         <input data-sendgrid="cnameRecord">
-        <button type="button" id="id-one" data-action="emailAutenticate, cnameRecord, action{id-two}">click</button>
+        <!--<button type="button" id="id-one" data-actions="emailAutenticate, cnameRecord, action{#id-two}">click</button>-->
+        <button type="button" id="id-one" data-actions="test_s1, event{actionEvent}, timeout{2000}, action{#id-two}">click</button>
 
       </form>
       <form>
         <input data-sendgrid="cnameRecord">
-        <button id="id-two" type="button" data-action="cnameRecord, action{id-three}" hidden>click</button>
+        <button id="id-two" type="button" data-actions="test_s2, action{#id-three}" hidden>click</button>
       </form>
       <form>
         <input data-sendgrid="cnameRecord">
-        <button id="id-three" type="button" data-action="cnameRecord" hidden>click</button>
+        <button id="id-three" type="button" data-actions="test_s1" hidden>click</button>
       </form>
     </div>
+    
+    <button id="fireEvent" type="button">Fire Event</button>
 
     <script>
       var config = {
@@ -90,58 +93,18 @@
       }
     </script>
    
-    <!--<script src="https://server.cocreate.app/js/CoCreate.min.js"></script>-->
-    <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
-  
-    <!--CoCreate Plugins-->
-    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-action/src/CoCreate-action.js"></script>
-
+    <!--<script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>-->
+    <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>
+    
     <script>
-      function s1() {
-        console.log("Stage btn 1: runing");
-        setTimeout(function(){
-          console.log("Stage btn 1: end");
-          document.dispatchEvent(new CustomEvent('s1'));
-
-          
-        }, 1000)
+      let eventBtn = document.getElementById('fireEvent')
+      eventBtn.addEventListener('click', function() {
         
-        
-      }
-      
-      function action() {
-        console.log("Stage btn 2: runing");
-        setTimeout(function(){
-          console.log("Stage btn 2: end");
-          document.dispatchEvent(new CustomEvent('s2'));
-          
-        }, 2000)
-      }
-
-
-      // function two() {
-      //   console.log("Stage btn 3: runing");
-      //   setTimeout(function(){
-      //     console.log("Stage btn 3: end");
-      //     document.dispatchEvent(new CustomEvent('s2'));
-      //   }, 2000)
-      // }
-      
-      CoCreate.action.registerEvent('s1', S1Action, window, 's1')
-      CoCreate.action.registerEvent('s2', S2Action, window, 's2')
-      CoCreate.action.registerEvent('s3', S3Action, window, 's2')
-      
-      // document.addEventListener('registerBtnEndEvent', function(e) {
-      //   CoCreateAction.fireEndEvent('registeBtn');
-      // })
-
-      // document.addEventListener('loginBtnEndEvent', function(e) {
-      //   CoCreateAction.fireEndEvent('loginBtn');
-      // })
-      
-      
+        console.log('Fire Event.....');
+        var customEvent = new CustomEvent("actionEvent", {detail: {item: "testing"}});
+        document.dispatchEvent(customEvent);
+      })
       
     </script>
-
   </body>
 </html>

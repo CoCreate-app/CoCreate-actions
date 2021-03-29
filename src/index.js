@@ -11,43 +11,7 @@ const CoCreateAction = {
   __init: function() {
     this.actionButtonEvent()
   },
-  // init: function(container) {
-    
-  //   const __container = container || document
-  //   if (!__container.querySelectorAll) {
-		// 	return;
-		// }
-		
-		// let buttons = __container.querySelectorAll("[data-actions]");
 
-		// for (let i = 0; i < buttons.length; i++) {
-		//   this.actionButtonEvent(buttons[i]);
-		// }
-  // },
-  
-  // actionButtonEvent: function(btn) {
-  //   const _this = this;    
-	 // let checkActions = btn.getAttribute('data-actions') || "";
-	 // checkActions = checkActions.replace(/\s/g, '').split(',');
-	  
-	 // if (checkActions.length == 0) {
-	 //   return;
-	 // }
-
-  //   btn.addEventListener('click', function(event) {
-  //     event.preventDefault();
-  //     let actions = this.getAttribute(_this.attribute) || "";
-  //     actions = actions.replace(/\s/g, '').split(',');
-  //     _this.stageIndex = 0;
-  //     _this.selectedStage = actions;
-      
-  //     //. run function
-  //     _this.selectedElement = btn;
-  //     _this.__runActionFunc();
-      
-  //   })
-  // },
-  
   actionButtonEvent: function() {
     const self = this;
     document.addEventListener('click', function(event) {
@@ -116,14 +80,19 @@ const CoCreateAction = {
       return;
     }
     
-    const key = this.selectedStage[this.stageIndex];
+    const actionName = this.selectedStage[this.stageIndex];
     //. run function
-    const action = this.actions[key];
+    const action = this.actions[actionName];
     if (action) {
       if (action.runFunc) {
         action.runFunc.call(null, this.selectedElement, data);
       } else {
         this.__nextAction(action.endEvent, {});
+      }
+    } else {
+      let status = this.__runSpecialAction(actionName, data);
+      if (status === "next") {
+        this.__moveNextAction();
       }
     }
   },
@@ -136,17 +105,62 @@ const CoCreateAction = {
     if (eventName !== this.actions[key].endEvent) {
       return;
     }
-    this.stageIndex ++;
-    this.__runActionFunc(data);
+    this.__moveNextAction(data);
   },
   
   __runAtag: function(button) {
     var aTag = button.querySelector('a');
           
     if (aTag) {
-      CoCreate.logic.setLinkProcess(aTag)
+      // CoCreate.logic.setLinkProcess(aTag)
     }
-  }
+  },
+  
+  //. special action
+  
+  __runSpecialAction: function(actionName, data) {
+    let matches = /(\w+)\{([a-zA-Z0-9_ \-#$.]+)\}/gm.exec(actionName)
+    
+    if (!matches || matches.length < 3) {
+      return "next";
+    }
+    
+    let type = matches[1], param = matches[2].trim()
+    if (!param) return "next";
+    
+    const self = this;
+    switch (type) {
+      case 'event':
+        console.log("Waiting Event....");
+        document.addEventListener(param, (eventData) => {
+          console.log('Event Action (Received event from other section) ====== ' + param);
+          self.__moveNextAction(eventData);
+        }, { once: true })
+        break;
+      case 'timeout':
+        let delayTime = parseInt(param);
+        if (delayTime > 0) {
+          setTimeout(function() {
+            console.log("Timeout ======= " + param)
+            self.__moveNextAction(data);
+          }, parseInt(param));
+        }
+        break;
+      case 'action':
+        let btn = document.querySelector(param);
+        if (btn) {
+          btn.click();
+        }
+        break;
+      default:
+        return "next";
+    }
+  },
+  
+  __moveNextAction: function(data) {
+    this.stageIndex ++;
+    this.__runActionFunc(data);
+  },
 }
 
 
