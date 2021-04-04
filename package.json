@@ -1,6 +1,6 @@
 {
   "name": "@cocreate/action",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A simple action component in vanilla javascript. Chain multiple functions and execute in a specified order. Easily configured using HTML5 data-attributes and/or JavaScript API.",
   "keywords": [
     "action",
