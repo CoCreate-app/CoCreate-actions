@@ -33,6 +33,10 @@ module.exports = [
             'repo' : 'github.com/CoCreate-app/CoCreate-crdt.git'
         },
         {
+            'path':'../CoCreate-components/CoCreate-crud-client',
+            'repo' : 'github.com/CoCreate-app/CoCreate-crud-client.git'
+        },
+        {
             'path':'../CoCreate-components/CoCreate-cursors',
             'repo' : 'github.com/CoCreate-app/CoCreate-cursors.git'
         },
@@ -52,10 +56,10 @@ module.exports = [
             'path':'../CoCreate-components/CoCreate-filter',
             'repo' : 'github.com/CoCreate-app/CoCreate-filter.git'
         },
-        {
-            'path':'../CoCreate-components/CoCreate-domToText',
-            'repo' : 'github.com/CoCreate-app/CoCreate-domToText.git'
-        },
+        // {
+        //     'path':'../CoCreate-components/CoCreate-domToText',
+        //     'repo' : 'github.com/CoCreate-app/CoCreate-domToText.git'
+        // },
         {
             'path':'../CoCreate-components/CoCreate-floating-label',
             'repo' : 'github.com/CoCreate-app/CoCreate-floating-label.git'
@@ -149,8 +153,8 @@ module.exports = [
             'repo' : 'github.com/CoCreate-app/CoCreate-sidenav.git'
         },
         {
-            'path':'../CoCreate-components/CoCreate-socket',
-            'repo' : 'github.com/CoCreate-app/CoCreate-socket.git'
+            'path':'../CoCreate-components/CoCreate-socket-client',
+            'repo' : 'github.com/CoCreate-app/CoCreate-socket-client.git'
         },
         {
             'path':'../CoCreate-components/CoCreate-social-share',
