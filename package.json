@@ -2,7 +2,24 @@
   "name": "@cocreate/repositories",
   "version": "1.0.0",
   "description": "A simple repositories component in vanilla javascript. Easily configured using HTML5 data-attributes and/or JavaScript API.",
-  "keywords": ["repositories","cocreate","low-code-framework","no-code-framework","cocreatejs","cocreatejs-component","cocreate-framework","no-code","low-code","collaborative-framework","realtime","realtime-framework","collaboration","shared-editing","html5-framework","javascript-framework"],
+  "keywords": [
+    "repositories",
+    "cocreate",
+    "low-code-framework",
+    "no-code-framework",
+    "cocreatejs",
+    "cocreatejs-component",
+    "cocreate-framework",
+    "no-code",
+    "low-code",
+    "collaborative-framework",
+    "realtime",
+    "realtime-framework",
+    "collaboration",
+    "shared-editing",
+    "html5-framework",
+    "javascript-framework"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -26,7 +43,6 @@
     "url": "https://github.com/CoCreate-app/CoCreate-repositories/issues"
   },
   "homepage": "https://cocreate.app/docs/repositories",
-
   "dependencies": {
     "child_process": "^1.0.2",
     "prompt": "^1.0.0",

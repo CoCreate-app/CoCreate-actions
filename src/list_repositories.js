@@ -41,10 +41,6 @@ module.exports = [
             'repo' : 'github.com/CoCreate-app/CoCreate-cursors.git'
         },
         {
-            'path':'../CoCreate-components/CoCreate-crud',
-            'repo' : 'github.com/CoCreate-app/CoCreate-crud.git'
-        },
-        {
             'path':'../CoCreate-components/CoCreate-dnd',
             'repo' : 'github.com/CoCreate-app/CoCreate-dnd.git'
         },
