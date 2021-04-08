@@ -25,6 +25,14 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/commands/start.js",
+    "watch": "node src/commands/watch.js",
+    "build": "node src/commands/build.js",
+    "package": "node src/commands/package.js",
+    "webpack": "node src/commands/webpack.js",
+    "workflows": "node src/commands/workflows.js",
+    "yarn-link": "node src/commands/yarn-link.js",
+    "link-modules": "node src/commands/link-modules.js"
     "push": "node src/commands/push.js",
     "pull": "node src/commands/pull.js",
     "init": "node src/commands/init.js",
