@@ -9,23 +9,23 @@ module.exports = {
     sources: [{
             path: "./docs/index.html",
             collection: "files",
-            document_id: "603c3588d8b57f4783b4ed6e",
+            document_id: "60145dc49f64ba1680b86693",
             key: "html",
             data:{
-                name: "Repositories Doc",
+                name: "Action Doc",
             }
         },
     ],
    
     crud: [{
             collection: "routes",
-            document_id: "603c3588d8b57f4783b4ed6d",
+            document_id: "60145dc49f64ba1680b86692",
             data:{
                 collection: "files",
-                document_id: "603c3588d8b57f4783b4ed6e",
+                document_id: "60145dc49f64ba1680b86693",
                 name: "html",
                 domains: ["cocreate.app", "server.cocreate.app", "ws.cocreate.app"],
-                route: "/docs/repositories",
+                route: "/docs/action",
             }
         }
     ],

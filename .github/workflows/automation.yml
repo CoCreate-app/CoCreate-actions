@@ -3,13 +3,13 @@ name: CI
 on:
   push:
     branches:
-    - master
+      - master
   pull_request:
     branches:
-    - master
+      - master
   create:
     branches:
-    - master
+      - master
 
 jobs:
   about:
@@ -17,13 +17,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-          
+
       - name: Jaid/action-sync-node-meta
         uses: jaid/action-sync-node-meta@v1.4.0
         with:
           direction: overwrite-github # default is overwrite-file
           githubToken: ${{ secrets.GITHUB }}
-  
+
   release:
     runs-on: ubuntu-latest
     steps:
@@ -41,14 +41,26 @@ jobs:
             @semantic-release/github
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}  # Auto Changog generator
-           
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }} # Auto Changog generator
+
   docs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      
+
       - name: update documentation
         uses: CoCreate-app/CoCreate-docs@master
-          
+
+  cdn:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: upload cdn
+        uses: CoCreate-app/CoCreate-s3@master
+        with:
+          aws-key-id: ${{ secrets.AWSACCESSKEYID }}
+          aws-access-key: ${{ secrets.AWSSECERTACCESSKEY }}
+          source: "./dist/CoCreate-action.min.js"

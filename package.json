@@ -1,9 +1,10 @@
 {
-  "name": "@cocreate/repositories",
-  "version": "1.1.0",
-  "description": "A simple repositories component in vanilla javascript. Easily configured using HTML5 data-attributes and/or JavaScript API.",
+  "name": "@cocreate/action",
+  "version": "1.0.5",
+  "description": "A simple action component in vanilla javascript. Chain multiple functions and execute in a specified order. Easily configured using HTML5 data-attributes and/or JavaScript API.",
   "keywords": [
-    "repositories",
+    "action",
+    "chain-functions",
     "cocreate",
     "low-code-framework",
     "no-code-framework",
@@ -24,38 +25,41 @@
     "access": "public"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodejs src/commands/start.js",
-    "watch": "nodejs src/commands/watch.js",
-    "build": "nodejs src/commands/build.js",
-    "package": "nodejs src/commands/package.js",
-    "webpack": "nodejs src/commands/webpack.js",
-    "workflows": "nodejs src/commands/workflows.js",
-    "yarn-link": "nodejs src/commands/yarn-link.js",
-    "link-modules": "nodejs src/commands/link-modules.js",
-    "push": "nodejs src/commands/push.js",
-    "pull": "nodejs src/commands/pull.js",
-    "init": "nodejs src/commands/init.js",
-    "clone": "nodejs src/commands/clone.js",
-    "merge": "nodejs src/commands/merge.js",
-    "commit": "nodejs src/commands/commit.js",
-    "checkout": "nodejs src/commands/checkout.js"
+    "start": "npx webpack --config webpack.config.js",
+    "build": "NODE_ENV=production npx webpack --config webpack.config.js",
+    "dev": "npx webpack --config webpack.config.js --watch",
+    "docs": "node ./node_modules/@cocreate/docs/src/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CoCreate-app/CoCreate-repositories.git"
+    "url": "git+https://github.com/CoCreate-app/CoCreate-action.git"
   },
   "author": "CoCreate LLC",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CoCreate-app/CoCreate-repositories/issues"
+    "url": "https://github.com/CoCreate-app/CoCreate-action/issues"
   },
-  "homepage": "https://cocreate.app/docs/repositories",
+  "homepage": "https://cocreate.app/docs/action",
+  "funding": {
+    "type": "GitHub Sponsors ❤",
+    "url": "https://github.com/sponsors/CoCreate-app"
+  },
+  "main": "./src/index.js",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^4.5.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^5.24.4",
+    "webpack-cli": "^4.5.0",
+    "webpack-log": "^3.0.1",
+    "file-loader": "^6.2.0",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.1.1"
+  },
   "dependencies": {
-    "child_process": "^1.0.2",
-    "prompt": "^1.0.0",
-    "shelljs": "^0.8.4",
-    "simple-git": "^2.12.0",
     "@cocreate/docs": "^1.0.3"
   }
 }
