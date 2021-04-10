@@ -1,3 +1,12 @@
+# [1.1.0](https://github.com/CoCreate-app/CoCreate-action/compare/v1.0.5...v1.1.0) (2021-04-10)
+
+
+### Features
+
+* Initial Release ([b2d09b2](https://github.com/CoCreate-app/CoCreate-action/commit/b2d09b22b7551cfefac52609ef0b400ad4f9c45d))
+* Initial Release ([aa22ac3](https://github.com/CoCreate-app/CoCreate-action/commit/aa22ac379e4d02ec159c45600466e7c720195193))
+* set timeout, listen to events and chain togeter multiple actions ([cb4055e](https://github.com/CoCreate-app/CoCreate-action/commit/cb4055ede1269b5dff83b0a729e466b6886c84ba))
+
 ## [1.0.5](https://github.com/CoCreate-app/CoCreate-action/compare/v1.0.4...v1.0.5) (2021-04-04)
 
 
