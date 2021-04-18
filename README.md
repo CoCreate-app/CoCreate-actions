@@ -9,7 +9,7 @@ A simple action component in vanilla javascript. Easily configured using HTML5 d
 
 ![CoCreate-action](https://cdn.cocreate.app/docs/CoCreate-action.gif)
 
-## [Docs & Demo](https://cocreate.app/docs/clone)
+## [Docs & Demo](https://cocreate.app/docs/action)
 
 For a complete guide and working demo refer to the [doumentation](https://cocreate.app/docs/action)
 
