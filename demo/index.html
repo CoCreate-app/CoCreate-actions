@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+    <title>Actions | CoCreateJS</title>
+
+    <!-- CoCreate CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css" />
+  
+  </head>
+  
+  <body>
+  
+    <form>
+      <button type="button" id="id-one" data-actions="event{actionEvent}, timeout{2000}, action{#id-two}">click</button>
+    </form>
+    
+    <form>
+     <input data-key="render.company" value="Paper Company">
+      <button id="id-two" type="button" data-actions="renderKey, timeout{1000}, action{#id-three}" hidden>click</button>
+    </form>
+    
+    <form>
+      <input data-key="render.name" value="Micheal Scott">
+      <button id="id-three" type="button" data-actions="renderKey" hidden>click</button>
+    </form>
+
+    <script>
+      var config = {
+            apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+            organization_Id: '5de0387b12e200ea63204d6c'
+      }
+    </script>
+    
+    <!-- CoCreate JS CDN -->
+    <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+
+  </body>
+</html>

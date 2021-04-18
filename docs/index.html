@@ -6,19 +6,45 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>CoCreate-action Documentation | CoCreateJS </title>
         <link rel="icon" type="image/png" sizes="32x32" href="https://cocreate.app/images/favicon.ico">
-        <meta name="description" content="A simple HTML5 and pure javascript component. Easy configuration using data-attributes and highly styleable." />
+        <meta name="description" content="A convenient chain handler allows user to chain multiple components together. When one action is complete next one will start untill all actions completed." />
         <meta name="keywords" content="helper classes, utility classes, css framework, css library, inline style classes" />
         <meta name="robots" content="index,follow" />
-        
+  	
+      	<!-- SOCIAL: TWITTER -->
+      	<meta name="twitter:url" content="http://scotch.io">
+      	<meta name="twitter:title" content="Top Shelf Web Development Training">
+      	<meta name="twitter:description" content="Fun and practical web development. Not just how, but why.">
+      	<meta name="twitter:image" content="https://cdn.scotch.io/1/7bqllytYQmWIMmYWF2RA_super-duper-cover-image.png">
+      	<meta name="twitter:creator" content="@scotch_io">
+      	<meta name="twitter:card" content="summary">
+      	<meta name="twitter:site" content="@scotch_io">
+      
+      	<!-- SOCIAL: FACESPACE -->
+      	<meta property="og:title" content="Top Shelf Web Development Training">
+      	<meta property="og:image" content="https://cdn.scotch.io/1/7bqllytYQmWIMmYWF2RA_super-duper-cover-image.png">
+      	<meta property="og:description" content="Fun and practical web development. Not just how, but why.">
+      	<!--<meta property="article:author" content="Scotch">-->
+      	<!--<meta property="fb:admins" content="579622216,709634581">-->
+      	<!--<meta property="fb:app_id" content="1389892087910588">-->
+      	<meta property="og:url" content="http://scotch.io">
+      	<meta property="og:type" content="website">
+      	<!--<meta property="article:publisher" content="https://www.facebook.com/scotchdevelopment">-->
+      	<meta property="og:site_name" content="Scotch">
+      
+      	<!-- SOCIAL: G+ -->
+      	<!--<link rel="publisher" href="https://plus.google.com/b/113854128330570384219">-->
+      	<!--<link rel="author" href="https://plus.google.com/b/113854128330570384219">-->
+       	<!--<meta name="description" content="Fun and practical web development. Not just how, but why.">-->
+
         <!-- CoCreate CSS -->
-        <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
+        <link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css" />
         
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
         
         <!-- Codemirror -->
-        <link rel="stylesheet" href="https://server.cocreate.app/CoCreate-plugins/CoCreate-codemirror/src/CoCreate-codemirror.css" type="text/css" />
-        <link rel=stylesheet href="https://codemirror.net/lib/codemirror.css"  async defer>
+        <!--<link rel="stylesheet" href="https://server.cocreate.app/CoCreate-plugins/CoCreate-codemirror/src/CoCreate-codemirror.css" type="text/css" />-->
+        <!--<link rel=stylesheet href="https://codemirror.net/lib/codemirror.css"  async defer>-->
 
         <!-- Highlight.js-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css">
@@ -41,16 +67,23 @@
                     <a class="margin-right:15px share" data-network='share' title="Share on share"><i class="fas fa-share-alt"></i></a>
                 </div>
             </div>
-            <p class="max-width:500px margin:20px_0px">A simple HTML5, CSS and pure javascript component. Easy configuration using data-attributes and highly styleable.</p>
+            <p class="max-width:500px margin:20px_0px">A convenient chain handler allows user to chain multiple CoCreate components together. When one action is complete next one will start. The sequence goes untill all actions completed. Grounded on Vanilla javascript, easily configured using HTML5 data-attributes and/or JavaScript API.</p>
             <div id="action-section" class="display:flex flex-wrap:wrap">
                 <div class="flex-grow:1 width:300px padding:0px_10px margin:20px_0px">
-    
-                <h2 class="border-bottom:1px_solid_lightgrey padding:5px_0px">Install</h2>
-                <pre><code class="language-javascript">npm install cocreate-action</code></pre>
+                    
+                <div>
+                    <h2 id="action-installation" data-hover="display:block" data-target="" class="border-bottom:1px_solid_lightgrey padding:5px_0px">Install</h2>
+                    <a class="display:none" href="#action-installation"><i class="fas fa-link"></i></a>
+                </div>
+                
+                <pre><code class="language-javascript">npm install  @cocreate/action</code></pre>
                 <p class="padding:10px_0px">Or you can use cdn link:</p>
-                <pre><code class="language-javascript">https://cdn.cocreate.app/CoCreate-action.min.js</code></pre>
+                <pre><code class="language-javascript">https://cdn.cocreate.app/latest/cocreate.min.js</code></pre>
 
-                <h2 class="border-bottom:1px_solid_lightgrey margin-top:80px padding:5px_0px">Usage</h2>
+                <div>
+                    <h2 id="action-usage" data-hover="display:block" data-target="" class="border-bottom:1px_solid_lightgrey margin-top:80px padding:5px_0px">Usage</h2>
+                    <a class="display:none" href="#action-usage"><i class="fas fa-link"></i></a>
+                </div>
                     <div class="">
                         <p class="padding:10px_0px">This is action reference</p>
                 
@@ -62,7 +95,12 @@
                         <p class="padding:10px_0px">This is action reference</p>
                         <p class="padding:10px_0px">This is action reference</p>
                     </div>
-                    <h2 class="border-bottom:1px_solid_lightgrey padding:5px_0px">Attributes</h2>
+                    
+                        <div>
+                           <h2 id="action-attributes" data-hover="display:block" data-target="" class="border-bottom:1px_solid_lightgrey padding:5px_0px">Attributes</h2>
+                           <a class="display:none" href="#action-attributes"><i class="fas fa-link"></i></a>
+                        </div>
+                        
                     <ul class="list-style-type:none ">
                         <li class="padding:15px_0px border-bottom:1px_solid_lightgrey">
                             <h4><span>data-action</span> <span class="cocreate-badge success">string</span> <span class="cocreate-badge warning">optional</span></h4>
@@ -76,8 +114,13 @@
                 </div>
                 
                 <div class="flex-grow:1 width:300px padding:0px_10px margin:20px_0px  border-bottom:1px_solid_lightgrey">
+                    
                     <!-- SandBox -->
-                    <h2 class="border-bottom:1px_solid_lightgrey padding:5px_0px">Demo</h2>
+                    <div>
+                       <h2 id="action-demo" data-hover="display:block" data-target="" class="border-bottom:1px_solid_lightgrey padding:5px_0px">Demo</h2>
+                       <a class="display:none" href="#action-demo"><i class="fas fa-link"></i></a>
+                    </div>
+                    
                     <div class="position:sticky top:0 padding:15px_0px height:100vh">
     			    <div class="container svColumn overflow:hidden card border-radius:2px width:auto height:100%" id="form-sandbox">
     			       <div class="font-size:20px position:absolute top:10px right:10px opacity:0.6 z-index:7">
@@ -123,6 +166,7 @@
     			        </div>
     			    </div>
     			    <!-- End SandBox -->
+    			    
     			    </div>
                 </div>
                 
@@ -132,15 +176,16 @@
             var config = {
                 apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
                 securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
-                organization_Id: '5de0387b12e200ea63204d6c'
+                organization_Id: '5de0387b12e200ea63204d6c',
+                // host: 'wss://ws.cocreate.app'
             }
         </script>
     
         <!--CoCreateJS-->
-        <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
         
         <!-- CoCreate CodeMiirror -->
-        <script type="text/javascript" src="https://server.cocreate.app/CoCreate-plugins/CoCreate-codemirror/dist/CoCreate-codemirror.js" async></script>
+        <!--<script type="text/javascript" src="https://server.cocreate.app/CoCreate-plugins/CoCreate-codemirror/dist/CoCreate-codemirror.js" async></script>-->
         
     </body>
 </html>

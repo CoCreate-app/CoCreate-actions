@@ -1,18 +1,28 @@
 # CoCreate-action
-A simple action component in vanilla javascript. Chain multiple functions and execute in a specified order. Easily configured using HTML5 data-attributes and/or JavaScript API. Take it for a spin in our [playground!](https://cocreate.app/docs/action)
+A convenient chain handler allows user to chain multiple CoCreate components together. When one action is complete next one will start. The sequence goes untill all actions completed. Grounded on Vanilla javascript, easily configured using HTML5 data-attributes and/or JavaScript API. Take it for a spin in our [playground!](https://cocreate.app/docs/action)
 
 ![GitHub file size in bytes](https://img.shields.io/github/size/CoCreate-app/CoCreate-action/dist/CoCreate-action.min.js?label=minified%20size&style=for-the-badge) 
 ![GitHub latest release](https://img.shields.io/github/v/release/CoCreate-app/CoCreate-action?style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/CoCreate-app/CoCreate-action?style=for-the-badge) 
 ![GitHub labels](https://img.shields.io/github/labels/CoCreate-app/CoCreate-action/help%20wanted?style=for-the-badge)
 
-![CoCreate](https://cdn.cocreate.app/logo.png)
+![CoCreate](https://cdn.cocreate.app/docs/CoCreate-action.gif)
 
-[CoCreate Docs](https://cocreate.app/docs/action)
+## [Docs & Demo](https://cocreate.app/docs/action)
+For a complete guide and working demo refer to our  [doumentation](https://cocreate.app/docs/action)
 
-We want this library to be community-driven, and CoCreate led. We need your help to realize this goal. To help make sure we are building the right things in the right order, we ask that you create [issues](https://github.com/CoCreate-app/Realtime_Admin_CRM_and_CMS/issues) and [pull requests](https://github.com/CoCreate-app/Realtime_Admin_CRM_and_CMS/pulls) or merely upvote or comment on existing issues or pull requests.
+## CDN
+```html
+<script src="https://cdn.cocreate.app/action/latest/CoCreate-action.min.js"></script>
+```
+```html
+<script src="https://cdn.cocreate.app/action/latest/CoCreate-action.min.css"></script>
+```
 
-We appreciate your continued support, thank you!
+## NPM
+```shell
+$ npm install @cocreate/action
+```
 
 # Table of Contents
 
@@ -33,7 +43,6 @@ All updates to this library are documented in our [CHANGELOG](https://github.com
 
 If you are interested in the future direction of this project, please take a look at our open [issues](https://github.com/CoCreate-app/CoCreate-action/issues) and [pull requests](https://github.com/CoCreate-app/CoCreate-action/pulls). We would love to hear your feedback.
 
-
 <a name="about"></a>
 # About
 
@@ -47,6 +56,10 @@ CoCreate-action is maintained and funded by CoCreate. The names and logos for Co
 # How to Contribute
 
 We encourage contribution to our libraries (you might even score some nifty swag), please see our [CONTRIBUTING](https://github.com/CoCreate-app/CoCreate-action/blob/master/CONTRIBUTING.md) guide for details.
+
+We want this library to be community-driven, and CoCreate led. We need your help to realize this goal. To help make sure we are building the right things in the right order, we ask that you create [issues](https://github.com/CoCreate-app/CoCreate-boilerplate/issues) and [pull requests](https://github.com/CoCreate-app/CoCreate-boilerplate/pulls) or merely upvote or comment on existing issues or pull requests.
+
+We appreciate your continued support, thank you!
 
 # License
 [The MIT License (MIT)](https://github.com/CoCreate-app/CoCreate-action/blob/master/LICENSE)
