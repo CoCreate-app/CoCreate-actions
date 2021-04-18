@@ -9,7 +9,7 @@ A convenient chain handler allows user to chain multiple CoCreate components tog
 
 ![CoCreate-action](https://cdn.cocreate.app/docs/CoCreate-action.gif)
 
-## [Docs & Demo](https://cocreate.app/docs/clone)
+## [Docs & Demo](https://cocreate.app/docs/action)
 
 For a complete guide and working demo refer to the [doumentation](https://cocreate.app/docs/action)
 
