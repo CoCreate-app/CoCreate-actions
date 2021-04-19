@@ -1,6 +1,6 @@
 {
   "name": "@cocreate/action",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "A convenient chain handler allows user to chain multiple CoCreate components together. When one action is complete next one will start. The sequence goes untill all actions completed. Grounded on Vanilla javascript, easily configured using HTML5 data-attributes and/or JavaScript API.",
   "keywords": [
     "action",
@@ -50,16 +50,17 @@
     "@babel/preset-env": "^7.9.6",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.0",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.1.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^5.24.4",
     "webpack-cli": "^4.5.0",
-    "webpack-log": "^3.0.1",
-    "file-loader": "^6.2.0",
-    "style-loader": "^2.0.0",
-    "terser-webpack-plugin": "^5.1.1"
+    "webpack-log": "^3.0.1"
   },
   "dependencies": {
-    "@cocreate/docs": "^1.0.3"
+    "@cocreate/docs": "^1.0.3",
+    "mini-css-extract-plugin": "^1.5.0"
   }
 }
