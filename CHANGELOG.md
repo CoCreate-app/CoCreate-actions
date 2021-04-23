@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/CoCreate-app/CoCreate-action/compare/v1.1.2...v1.1.3) (2021-04-23)
+
+
+### Bug Fixes
+
+* readme and documentation. Removed securitykeys ([8838306](https://github.com/CoCreate-app/CoCreate-action/commit/8838306ce80f711d4d726f08460a057416cbcb23))
+
 ## [1.1.2](https://github.com/CoCreate-app/CoCreate-action/compare/v1.1.1...v1.1.2) (2021-04-19)
 
 
