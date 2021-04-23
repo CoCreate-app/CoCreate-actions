@@ -41,8 +41,8 @@
     </head>
 
     <body>
-        <div data-collection="" data-document_id="" name="" id="cocreate-action" class="padding:15px">
-            <div class="display:flex flex-wrap:wrap justify-content:space-between">
+        <div data-collection="" data-document_id="" name="" id="cocreate-action">
+            <div class="display:flex flex-wrap:wrap justify-content:space-between margin:10px">
                 <div class="display:flex align-items:center">
                     <h2>CoCreate-action</h2>
                 </div>
@@ -54,23 +54,27 @@
                     <a class="margin-right:15px" data-share_network='share' title="Share on share"><i class="fas fa-share-alt"></i></a>
                 </div>
             </div>
-            <p class="max-width:500px margin:20px_0px">A convenient chain handler allows user to chain multiple CoCreate components together. When one action is complete next one will start. The sequence goes untill all actions completed. Grounded on Vanilla javascript, easily configured using HTML5 data-attributes and/or JavaScript API.</p>
+            <p class="max-width:500px margin:20px_10px">A convenient chain handler allows user to chain multiple CoCreate components together. When one action is complete next one will start. The sequence goes untill all actions completed. Grounded on Vanilla javascript, easily configured using HTML5 data-attributes and/or JavaScript API.</p>
             <div id="action-section" class="display:flex flex-wrap:wrap">
                 <div class="flex-grow:1 width:300px padding:0px_10px margin:20px_0px">
                     
-                <div>
-                    <h2 id="action-installation" data-hover="display:block" data-target="" class="border-bottom:1px_solid_lightgrey padding:5px_0px">Install</h2>
-                    <a class="display:none" href="#action-installation"><i class="fas fa-link"></i></a>
-                </div>
-                
-                <pre><code class="language-bash">npm install @cocreate/action</code></pre>
-                <p class="padding:10px_0px">Or you can use cdn link:</p>
-                <pre><code class="language-html">&lt;script&gt;https://cdn.cocreate.app/latest/cocreate.min.js&lt;/script&gt;</code></pre>
-
-                <div>
-                    <h2 id="action-usage" data-hover="display:block" data-target="" class="border-bottom:1px_solid_lightgrey margin-top:80px padding:5px_0px">Usage</h2>
-                    <a class="display:none" href="#action-usage"><i class="fas fa-link"></i></a>
-                </div>
+                    <div id="action-install" class="border-bottom:1px_solid_lightgrey">
+                        <span class="display:flex align-items:center" data-hover="display:block!important" data-hover_target='[href="#action-install"]'>
+                            <h2 class="padding:5px_0px">Install</h2>
+                            <a class="margin-left:10px display:none" href="#action-install"><i class="fas fa-link"></i></a>
+                        </span>
+                    </div>
+                    
+                    <pre><code class="language-bash">npm i @cocreate/action</code></pre>
+                    <p class="padding:10px_0px">Or you can use cdn link:</p>
+                    <pre><code class="language-html">&lt;script&gt;https://cdn.cocreate.app/action/latest/CoCreate-action.min.js&lt;/script&gt;</code></pre>
+    
+                    <div id="action-usage" class="margin-top:80px border-bottom:1px_solid_lightgrey">
+                        <span class="display:flex align-items:center" data-hover="display:block!important" data-hover_target='[href="#action-usage"]'>
+                            <h2 class="padding:5px_0px">Usage</h2>
+                            <a class="margin-left:10px display:none" href="#action-usage"><i class="fas fa-link"></i></a>
+                        </span>
+                    </div>
                     <div class="">
                         <p class="padding:10px_0px">This is action reference</p>
                 
@@ -83,10 +87,12 @@
                         <p class="padding:10px_0px">This is action reference</p>
                     </div>
                     
-                        <div>
-                           <h2 id="action-attributes" data-hover="display:block" data-target="" class="border-bottom:1px_solid_lightgrey padding:5px_0px">Attributes</h2>
-                           <a class="display:none" href="#action-attributes"><i class="fas fa-link"></i></a>
-                        </div>
+                    <div id="action-attributes" class="margin-top:80px border-bottom:1px_solid_lightgrey">
+                        <span class="display:flex align-items:center" data-hover="display:block!important" data-hover_target='[href="#action-attributes"]'>
+                            <h2 class="padding:5px_0px">Attributes</h2>
+                            <a class="margin-left:10px display:none" href="#action-attributes"><i class="fas fa-link"></i></a>
+                        </span>
+                    </div>
                         
                     <ul class="list-style-type:none ">
                         <li class="padding:15px_0px border-bottom:1px_solid_lightgrey">
@@ -103,9 +109,11 @@
                 <div class="flex-grow:1 width:300px padding:0px_10px margin:20px_0px  border-bottom:1px_solid_lightgrey">
                     
                     <!-- SandBox -->
-                    <div>
-                       <h2 id="action-demo" data-hover="display:block" data-target="" class="border-bottom:1px_solid_lightgrey padding:5px_0px">Demo</h2>
-                       <a class="display:none" href="#action-demo"><i class="fas fa-link"></i></a>
+                    <div id="action-demo" class="border-bottom:1px_solid_lightgrey">
+                        <span class="display:flex align-items:center" data-hover="display:block!important" data-hover_target='[href="#action-demo"]'>
+                            <h2 class="padding:5px_0px">Demo</h2>
+                            <a class="margin-left:10px display:none" href="#action-demo"><i class="fas fa-link"></i></a>
+                        </span>
                     </div>
                     
                     <div class="position:sticky top:0 padding:15px_0px height:100vh">
@@ -169,8 +177,7 @@
         </script>
     
         <!--CoCreateJS-->
-        <!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>-->
-        <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js" ></script>
-    
+        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>
+
     </body>
 </html>
