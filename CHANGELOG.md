@@ -1,3 +1,10 @@
+## [1.1.9](https://github.com/CoCreate-app/CoCreate-action/compare/v1.1.8...v1.1.9) (2021-06-24)
+
+
+### Bug Fixes
+
+* update all [@cocreate](https://github.com/cocreate) to use latest versions ([284d86a](https://github.com/CoCreate-app/CoCreate-action/commit/284d86a020a650cfe6a7b7cf0ecc4282b4112295))
+
 ## [1.1.8](https://github.com/CoCreate-app/CoCreate-action/compare/v1.1.7...v1.1.8) (2021-06-23)
 
 
