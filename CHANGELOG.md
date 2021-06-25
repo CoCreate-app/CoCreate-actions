@@ -1,3 +1,10 @@
+## [1.1.11](https://github.com/CoCreate-app/CoCreate-action/compare/v1.1.10...v1.1.11) (2021-06-25)
+
+
+### Bug Fixes
+
+* latest version numbers applied to all cocreate packages ([f197486](https://github.com/CoCreate-app/CoCreate-action/commit/f1974863298cbf15d7d65da371628fb89b87f6c0))
+
 ## [1.1.10](https://github.com/CoCreate-app/CoCreate-action/compare/v1.1.9...v1.1.10) (2021-06-24)
 
 
