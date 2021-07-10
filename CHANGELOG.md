@@ -1,3 +1,10 @@
+## [1.1.15](https://github.com/CoCreate-app/CoCreate-action/compare/v1.1.14...v1.1.15) (2021-07-10)
+
+
+### Bug Fixes
+
+* gitignore all logs ([40bdfd6](https://github.com/CoCreate-app/CoCreate-action/commit/40bdfd6c8df1a38eb06fc2e6dda2b3ba89b99ff1))
+
 ## [1.1.14](https://github.com/CoCreate-app/CoCreate-action/compare/v1.1.13...v1.1.14) (2021-07-07)
 
 
