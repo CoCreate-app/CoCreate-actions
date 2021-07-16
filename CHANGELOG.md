@@ -1,3 +1,18 @@
+## [1.1.17](https://github.com/CoCreate-app/CoCreate-action/compare/v1.1.16...v1.1.17) (2021-07-14)
+
+
+### Bug Fixes
+
+* upgrade all packages ([6688a31](https://github.com/CoCreate-app/CoCreate-action/commit/6688a314afbe7ccc21f445d1f740288acc25f733))
+
+## [1.1.16](https://github.com/CoCreate-app/CoCreate-action/compare/v1.1.15...v1.1.16) (2021-07-13)
+
+
+### Bug Fixes
+
+* add yarn lockfile to git ignore ([36586a1](https://github.com/CoCreate-app/CoCreate-action/commit/36586a116627916c0027275b936800a62c430935))
+* remove yarn.lock ([a9cf99c](https://github.com/CoCreate-app/CoCreate-action/commit/a9cf99c6851f70b3ef68cd1abdb130b483861959))
+
 ## [1.1.15](https://github.com/CoCreate-app/CoCreate-action/compare/v1.1.14...v1.1.15) (2021-07-10)
 
 
