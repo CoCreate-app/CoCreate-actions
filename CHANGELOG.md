@@ -1,3 +1,10 @@
+## [1.1.19](https://github.com/CoCreate-app/CoCreate-action/compare/v1.1.18...v1.1.19) (2021-07-22)
+
+
+### Bug Fixes
+
+* run link if modal, data-pass_to ([cf0e8f2](https://github.com/CoCreate-app/CoCreate-action/commit/cf0e8f2adf7a14b2ad4b122b453eee3563dd757e))
+
 ## [1.1.18](https://github.com/CoCreate-app/CoCreate-action/compare/v1.1.17...v1.1.18) (2021-07-17)
 
 
