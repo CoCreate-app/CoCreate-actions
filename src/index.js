@@ -5,33 +5,7 @@ const CoCreateAction = {
   selectedStage: [],
   stageIndex: 0,
   selectedElement: null,
-  
   completedEventName: 'completedEvent',
-  
-  __init: function() {
-    this.actionButtonEvent()
-  },
-
-  actionButtonEvent: function() {
-    const self = this;
-    document.addEventListener('click', function(event) {
-      let btn = event.target;
-      if (!btn.getAttribute('data-actions')) {
-        btn = event.target.closest('[data-actions]');
-      }
-      if (!btn) return;
-      event.preventDefault();
-
-      let actions = (btn.getAttribute(self.attribute) || "").replace(/\s/g, '').split(',');
-      if (actions.length == 0) return;
-      self.stageIndex = 0;
-      self.selectedStage = actions;
-      
-      //. run function
-      self.selectedElement = btn;
-      self.__runActionFunc();
-    })
-  },
   
   init: function({action, callback, endEvent}) {
     this.registerEvent(action, callback, null, endEvent);
@@ -54,28 +28,46 @@ const CoCreateAction = {
       instance: instance || window,
       endEvent: endEvent
     }
-    //. register events
-    
+
     for (let __key in this.actions) {
       if (__key != key && this.actions[__key]['endEvent'] === endEvent) {
         return;
       }
     }
     
-    //. register events
     const _this = this;
     document.addEventListener(endEvent, function(e) {
       _this.__nextAction(endEvent, e.detail)
     });
   },
   
-  __runActionFunc: function(data) {
+  initActions: function() {
+    const self = this;
+    document.addEventListener('click', function(event) {
+      let btn = event.target;
+      if (!btn.getAttribute('data-actions')) {
+        btn = event.target.closest('[data-actions]');
+      }
+      if (!btn) return;
+      event.preventDefault();
+
+      let actions = (btn.getAttribute(self.attribute) || "").replace(/\s/g, '').split(',');
+      if (actions.length == 0) return;
+      self.stageIndex = 0;
+      self.selectedStage = actions;
+      
+      //. run function
+      self.selectedElement = btn;
+      self.__runAction();
+    })
+  },
+  
+  __runAction: function(data) {
 
     if (this.stageIndex >= this.selectedStage.length) {
 
-      //. if latest case, it will be run aTag
       if (this.stageIndex == this.selectedStage.length) {
-        this.__runAtag(this.selectedElement);        
+        this.__runLink(this.selectedElement);        
       }
       return;
     }
@@ -92,7 +84,7 @@ const CoCreateAction = {
     } else {
       let status = this.__runSpecialAction(actionName, data);
       if (status === "next") {
-        this.__moveNextAction();
+        this.__runNextAction();
       }
     }
   },
@@ -105,18 +97,8 @@ const CoCreateAction = {
     if (eventName !== this.actions[key].endEvent) {
       return;
     }
-    this.__moveNextAction(data);
+    this.__runNextAction(data);
   },
-  
-  __runAtag: function(button) {
-    var aTag = button.querySelector('a');
-          
-    if (aTag) {
-      // CoCreate.logic.setLinkProcess(aTag)
-    }
-  },
-  
-  //. special action
   
   __runSpecialAction: function(actionName, data) {
     let matches = /(\w+)\{([a-zA-Z0-9_ \-#$.]+)\}/gm.exec(actionName)
@@ -134,7 +116,7 @@ const CoCreateAction = {
         console.log("Waiting Event....");
         document.addEventListener(param, (eventData) => {
           console.log('Event Action (Received event from other section) ====== ' + param);
-          self.__moveNextAction(eventData);
+          self.__runNextAction(eventData);
         }, { once: true })
         break;
       case 'timeout':
@@ -142,7 +124,7 @@ const CoCreateAction = {
         if (delayTime > 0) {
           setTimeout(function() {
             console.log("Timeout ======= " + param)
-            self.__moveNextAction(data);
+            self.__runNextAction(data);
           }, parseInt(param));
         }
         break;
@@ -157,13 +139,30 @@ const CoCreateAction = {
     }
   },
   
-  __moveNextAction: function(data) {
+  __runNextAction: function(data) {
     this.stageIndex ++;
-    this.__runActionFunc(data);
+    this.__runAction(data);
+  },
+  
+  __runLink: function(element) {
+		const link = element.closest('[href], [target], [data-pass_to]');
+    if (!link) return;
+
+    if (typeof CoCreate.logic !== 'undefined') {
+      if (link.hasAttribute('data-pass_to') || (link.getAttribute('target') === 'modal')) {
+        CoCreate.logic.runLink(link)
+      }
+      else if (link.hasAttribute('href')) {
+        window.location.href = link.getAttribute('href');
+      }
+    }
+    else if (link.hasAttribute('href')) {
+      window.location.href = link.getAttribute('href');
+    }
   },
 }
 
 
-CoCreateAction.__init();
+CoCreateAction.initActions();
 
 export default CoCreateAction;
