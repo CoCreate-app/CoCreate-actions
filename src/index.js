@@ -1,6 +1,6 @@
 // -testing1
 const CoCreateAction = {
-  attribute: 'data-actions',
+  attribute: 'actions',
   actions: {},
   selectedStage: [],
   stageIndex: 0,
@@ -45,8 +45,8 @@ const CoCreateAction = {
     const self = this;
     document.addEventListener('click', function(event) {
       let btn = event.target;
-      if (!btn.getAttribute('data-actions')) {
-        btn = event.target.closest('[data-actions]');
+      if (!btn.getAttribute('actions')) {
+        btn = event.target.closest('[actions]');
       }
       if (!btn) return;
       event.preventDefault();
@@ -145,11 +145,11 @@ const CoCreateAction = {
   },
   
   __runLink: function(element) {
-		const link = element.closest('[href], [target], [data-pass_to]');
+		const link = element.closest('[href], [target], [pass_to]');
     if (!link) return;
 
     if (typeof CoCreate.logic !== 'undefined') {
-      if (link.hasAttribute('data-pass_to') || (link.getAttribute('target') === 'modal')) {
+      if (link.hasAttribute('pass_to') || (link.getAttribute('target') === 'modal')) {
         CoCreate.logic.runLink(link)
       }
       else if (link.hasAttribute('href')) {

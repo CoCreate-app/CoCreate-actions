@@ -9,17 +9,17 @@
   <body>
   
     <form>
-      <button type="button" id="id-one" data-actions="event{actionEvent}, timeout{2000}, action{#id-two}">click</button>
+      <button type="button" id="id-one" actions="event{actionEvent}, timeout{2000}, action{#id-two}">click</button>
     </form>
     
     <form>
      <input data-key="render.company" value="Paper Company">
-      <button id="id-two" type="button" data-actions="renderKey, timeout{1000}, action{#id-three}" hidden>click</button>
+      <button id="id-two" type="button" actions="renderKey, timeout{1000}, action{#id-three}" hidden>click</button>
     </form>
     
     <form>
       <input data-key="render.name" value="Micheal Scott">
-      <button id="id-three" type="button" data-actions="renderKey" hidden>click</button>
+      <button id="id-three" type="button" actions="renderKey" hidden>click</button>
     </form>
 
     <script>
