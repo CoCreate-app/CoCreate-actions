@@ -145,16 +145,18 @@ const CoCreateAction = {
   },
   
   __runLink: function(element) {
-		const link = element.closest('[href], [target], [pass_to]');
-    if (!link) return;
-
+  	let link = element.closest('[href], [target], [pass_to]');
+    if (!link) { 
+      let link = element.querySelector('[href], [target], [pass_to]');
+      if (!link) return;
+	  	this.__run(link);
+    }
+    this.__run(link);
+  },
+  
+  __run: function(link) {
     if (typeof CoCreate.logic !== 'undefined') {
-      if (link.hasAttribute('pass_to') || (link.getAttribute('target') === 'modal')) {
         CoCreate.logic.runLink(link)
-      }
-      else if (link.hasAttribute('href')) {
-        window.location.href = link.getAttribute('href');
-      }
     }
     else if (link.hasAttribute('href')) {
       window.location.href = link.getAttribute('href');
