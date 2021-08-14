@@ -1,3 +1,11 @@
+## [1.2.3](https://github.com/CoCreate-app/CoCreate-action/compare/v1.2.2...v1.2.3) (2021-08-14)
+
+
+### Bug Fixes
+
+* improved href logic ([ebce681](https://github.com/CoCreate-app/CoCreate-action/commit/ebce68196be2154a1393217c8e6c09ca6cd386a8))
+* update to  docs ([c392411](https://github.com/CoCreate-app/CoCreate-action/commit/c39241132ed0f2d6a5bbc7002cdb1e6b8aa6bfac))
+
 ## [1.2.2](https://github.com/CoCreate-app/CoCreate-action/compare/v1.2.1...v1.2.2) (2021-08-02)
 
 
