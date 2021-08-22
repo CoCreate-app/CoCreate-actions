@@ -1,3 +1,10 @@
+## [1.2.6](https://github.com/CoCreate-app/CoCreate-action/compare/v1.2.5...v1.2.6) (2021-08-22)
+
+
+### Bug Fixes
+
+* removed data- from main-content, clone, filter-value_type ([34686d1](https://github.com/CoCreate-app/CoCreate-action/commit/34686d1c020b4f74c2276bbf1bc7ab2efd926dfa))
+
 ## [1.2.5](https://github.com/CoCreate-app/CoCreate-action/compare/v1.2.4...v1.2.5) (2021-08-22)
 
 
