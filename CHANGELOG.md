@@ -1,3 +1,10 @@
+## [1.2.19](https://github.com/CoCreate-app/CoCreate-action/compare/v1.2.18...v1.2.19) (2021-09-16)
+
+
+### Bug Fixes
+
+* update dependencies ([fe4d632](https://github.com/CoCreate-app/CoCreate-action/commit/fe4d6328489358dc91f04bdeffe11cd59573549f))
+
 ## [1.2.18](https://github.com/CoCreate-app/CoCreate-action/compare/v1.2.17...v1.2.18) (2021-09-14)
 
 
