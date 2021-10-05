@@ -1,3 +1,11 @@
+## [1.2.25](https://github.com/CoCreate-app/CoCreate-action/compare/v1.2.24...v1.2.25) (2021-10-05)
+
+
+### Bug Fixes
+
+* update dependencies ([4316c21](https://github.com/CoCreate-app/CoCreate-action/commit/4316c213c7f424b5ced3d387f52b0616099d5b37))
+* website_id in CoCreate.config ([4d11f37](https://github.com/CoCreate-app/CoCreate-action/commit/4d11f37acfab340785c84d5b90f31b0d95f53a55))
+
 ## [1.2.24](https://github.com/CoCreate-app/CoCreate-action/compare/v1.2.23...v1.2.24) (2021-10-04)
 
 
