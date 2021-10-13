@@ -1,6 +1,6 @@
 # CoCreate-action
 
-A convenient chain handler allows user to chain multiple CoCreate components together. When one action is complete next one will start. The sequence goes untill all actions completed. Grounded on Vanilla javascript, easily configured using HTML5 data-attributes and/or JavaScript API. Take it for a spin in our [playground!](https://cocreate.app/docs/action)
+A convenient chain handler allows user to chain multiple CoCreate components together. When one action is complete next one will start. The sequence goes untill all actions completed. Grounded on Vanilla javascript, easily configured using HTML5 attributes and/or JavaScript API. Take it for a spin in our [playground!](https://cocreate.app/docs/action)
 
 ![minified](https://img.badgesize.io/https://cdn.cocreate.app/action/latest/CoCreate-action.min.js?style=flat-square&label=minified&color=orange)
 ![gzip](https://img.badgesize.io/https://cdn.cocreate.app/action/latest/CoCreate-action.min.js?compression=gzip&style=flat-square&label=gzip&color=yellow)
