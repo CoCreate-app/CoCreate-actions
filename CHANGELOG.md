@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/CoCreate-app/CoCreate-action/compare/v1.2.29...v1.3.0) (2021-10-14)
+
+
+### Bug Fixes
+
+* updated dependencies ([1fb7b48](https://github.com/CoCreate-app/CoCreate-action/commit/1fb7b4852d79e771ffa89c5b6ffb5afdc3ff74b8))
+
+
+### Features
+
+* actions now support add additional params. A map  actionParams are attached to the element/btn. Useexample actions='validate(#input)' then validation script can use param as a selector ([2485f58](https://github.com/CoCreate-app/CoCreate-action/commit/2485f58e4fc4691c64c1e6274165ebda37170214))
+
 ## [1.2.29](https://github.com/CoCreate-app/CoCreate-action/compare/v1.2.28...v1.2.29) (2021-10-13)
 
 
