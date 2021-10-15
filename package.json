@@ -1,6 +1,6 @@
 {
   "name": "@cocreate/action",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "A convenient chain handler allows user to chain multiple CoCreate components together. When one action is complete next one will start. The sequence goes untill all actions completed. Grounded on Vanilla javascript, easily configured using HTML5 attributes and/or JavaScript API.",
   "keywords": [
     "action",
