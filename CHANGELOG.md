@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/CoCreate-app/CoCreate-action/compare/v1.3.2...v1.3.3) (2021-10-16)
+
+
+### Bug Fixes
+
+* update socket package to fix bug in docs ([f03b236](https://github.com/CoCreate-app/CoCreate-action/commit/f03b236aad0aa6c0ecea1de89bd123b9c923c3a9))
+
 ## [1.3.2](https://github.com/CoCreate-app/CoCreate-action/compare/v1.3.1...v1.3.2) (2021-10-15)
 
 
