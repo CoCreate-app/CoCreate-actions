@@ -1,3 +1,10 @@
+## [1.3.9](https://github.com/CoCreate-app/CoCreate-action/compare/v1.3.8...v1.3.9) (2021-11-05)
+
+
+### Bug Fixes
+
+* remove consoleLog ([435a02e](https://github.com/CoCreate-app/CoCreate-action/commit/435a02e6bb42861712e0af868e6663e5d5294ba4))
+
 ## [1.3.8](https://github.com/CoCreate-app/CoCreate-action/compare/v1.3.7...v1.3.8) (2021-11-04)
 
 
