@@ -64,14 +64,14 @@ const CoCreateAction = {
                 let param;
                 [action, param] = action.split('(')
                 if (param) {
-                    const actionParams = new Map();
+                    // const actionParams = new Map();
                     param = param.substring(0, (param.length - 1))
                     self.selectedElement.actionParams.set(action, param);
                 }
                 tempActions.push(action)
             }
             self.selectedStage = tempActions;
-            console.log(self.selectedElement.actionParams)
+            // console.log(self.selectedElement.actionParams)
             self.__runAction();
         })
     },
