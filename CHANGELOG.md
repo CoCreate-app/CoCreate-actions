@@ -1,3 +1,10 @@
+## [1.3.17](https://github.com/CoCreate-app/CoCreate-action/compare/v1.3.16...v1.3.17) (2021-11-20)
+
+
+### Bug Fixes
+
+* updated script tags and link tags ([7029b0b](https://github.com/CoCreate-app/CoCreate-action/commit/7029b0b5b7d7c9043a2fb0c9718bf8531d40cab6))
+
 ## [1.3.16](https://github.com/CoCreate-app/CoCreate-action/compare/v1.3.15...v1.3.16) (2021-11-20)
 
 
