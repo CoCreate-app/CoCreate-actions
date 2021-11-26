@@ -1,3 +1,10 @@
+## [1.3.20](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.3.19...v1.3.20) (2021-11-26)
+
+
+### Bug Fixes
+
+* update package name to actions ([f497131](https://github.com/CoCreate-app/CoCreate-actions/commit/f49713113bc3039aaa56f99cf24a67563bd4336d))
+
 ## [1.3.19](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.3.18...v1.3.19) (2021-11-26)
 
 
