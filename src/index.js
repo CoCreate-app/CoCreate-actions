@@ -7,8 +7,8 @@ const CoCreateAction = {
     selectedElement: null,
     completedEventName: 'completedEvent',
 
-    init: function({ action, callback, endEvent }) {
-        this.registerEvent(action, callback, null, endEvent);
+    init: function({ name, callback, endEvent }) {
+        this.registerEvent(name, callback, null, endEvent);
     },
 
     /**
