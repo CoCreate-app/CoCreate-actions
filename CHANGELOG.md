@@ -1,3 +1,10 @@
+## [1.3.36](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.3.35...v1.3.36) (2022-02-28)
+
+
+### Bug Fixes
+
+* bump cdn version ([bdfad3a](https://github.com/CoCreate-app/CoCreate-actions/commit/bdfad3a9cce7bd9ddac1bb01893405d61c7ec677))
+
 ## [1.3.35](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.3.34...v1.3.35) (2022-02-24)
 
 
