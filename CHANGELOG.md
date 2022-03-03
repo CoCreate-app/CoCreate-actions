@@ -1,3 +1,10 @@
+## [1.3.37](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.3.36...v1.3.37) (2022-03-03)
+
+
+### Bug Fixes
+
+* update cocreate.config host ([9a061fb](https://github.com/CoCreate-app/CoCreate-actions/commit/9a061fb157521427bd82fc645ed9793b31372dea))
+
 ## [1.3.36](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.3.35...v1.3.36) (2022-02-28)
 
 
