@@ -1,3 +1,10 @@
+## [1.3.38](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.3.37...v1.3.38) (2022-05-03)
+
+
+### Bug Fixes
+
+* update functions .logic to .link ([86b4215](https://github.com/CoCreate-app/CoCreate-actions/commit/86b42158c5c4386faded8085445255ad9e88ece0))
+
 ## [1.3.37](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.3.36...v1.3.37) (2022-03-03)
 
 
