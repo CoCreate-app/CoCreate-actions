@@ -172,8 +172,8 @@ const CoCreateAction = {
     },
 
     __run: function(link) {
-        if (typeof CoCreate.logic !== 'undefined') {
-            CoCreate.logic.runLink(link)
+        if (typeof CoCreate.link !== 'undefined') {
+            CoCreate.link.runLink(link)
         }
         else if (link.hasAttribute('href')) {
             window.location.href = link.getAttribute('href');
