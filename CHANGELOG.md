@@ -1,3 +1,11 @@
+## [1.4.3](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.4.2...v1.4.3) (2022-06-12)
+
+
+### Bug Fixes
+
+* update dependencies ([39d2c81](https://github.com/CoCreate-app/CoCreate-actions/commit/39d2c812a97dab54b93418cddbaa42f53db02a84))
+* update docs css document_id ([4ee709d](https://github.com/CoCreate-app/CoCreate-actions/commit/4ee709d981f0de73f7a1b7f142e702a8428204f2))
+
 ## [1.4.2](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.4.1...v1.4.2) (2022-05-23)
 
 
