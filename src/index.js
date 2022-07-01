@@ -1,4 +1,5 @@
-// -testing1
+import { queryDocumentSelectorAll } from '@cocreate/utils'
+
 const CoCreateAction = {
     attribute: 'actions',
     actions: {},
@@ -146,7 +147,7 @@ const CoCreateAction = {
                 }
                 break;
             case 'action':
-                let btn = document.querySelector(param);
+                let btn = queryDocumentSelectorAll(param);
                 if (btn) {
                     btn.click();
                 }
