@@ -1,6 +1,6 @@
 {
   "name": "@cocreate/actions",
-  "version": "1.5.31",
+  "version": "1.5.32",
   "description": "A convenient chain handler allows user to chain multiple CoCreate components together. When one action is complete next one will start. The sequence goes untill all actions completed. Grounded on Vanilla javascript, easily configured using HTML5 attributes and/or JavaScript API.",
   "keywords": [
     "actions",
@@ -21,7 +21,9 @@
     "html5-framework",
     "javascript-framework"
   ],
-  "publishConfig": { "access": "public" },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "npx webpack --config webpack.config.js",
     "build": "NODE_ENV=production npx webpack --config webpack.config.js",
@@ -35,7 +37,9 @@
   },
   "author": "CoCreate LLC",
   "license": "MIT",
-  "bugs": { "url": "https://github.com/CoCreate-app/CoCreate-actions/issues" },
+  "bugs": {
+    "url": "https://github.com/CoCreate-app/CoCreate-actions/issues"
+  },
   "homepage": "https://cocreate.app/docs/actions",
   "funding": {
     "type": "GitHub Sponsors ❤",
