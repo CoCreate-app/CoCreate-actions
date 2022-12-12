@@ -1,3 +1,10 @@
+## [1.5.35](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.5.34...v1.5.35) (2022-12-12)
+
+
+### Bug Fixes
+
+* bump dependencies ([229106c](https://github.com/CoCreate-app/CoCreate-actions/commit/229106cb46b82356854234a5841ac3dafd64f089))
+
 ## [1.5.34](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.5.33...v1.5.34) (2022-12-11)
 
 
