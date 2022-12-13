@@ -1,3 +1,10 @@
+## [1.5.37](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.5.36...v1.5.37) (2022-12-13)
+
+
+### Bug Fixes
+
+* removed un used devDependencies ([cefca8f](https://github.com/CoCreate-app/CoCreate-actions/commit/cefca8f8a730416e884e7d43aa1b8da208395f90))
+
 ## [1.5.36](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.5.35...v1.5.36) (2022-12-13)
 
 
