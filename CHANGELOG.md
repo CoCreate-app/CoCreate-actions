@@ -1,3 +1,10 @@
+## [1.5.38](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.5.37...v1.5.38) (2022-12-15)
+
+
+### Bug Fixes
+
+* add missing dev dependency style-loader ([e4f69a1](https://github.com/CoCreate-app/CoCreate-actions/commit/e4f69a169a32abb698fe3cf809b0016f9487191a))
+
 ## [1.5.37](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.5.36...v1.5.37) (2022-12-13)
 
 
