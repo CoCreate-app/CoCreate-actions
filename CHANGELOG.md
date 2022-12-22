@@ -1,3 +1,11 @@
+## [1.5.42](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.5.41...v1.5.42) (2022-12-22)
+
+
+### Bug Fixes
+
+* bump dependencies ([34df22e](https://github.com/CoCreate-app/CoCreate-actions/commit/34df22e368ae3ade7ea509541602c4c6ea6a3cb6))
+* update cdn ([c2ba485](https://github.com/CoCreate-app/CoCreate-actions/commit/c2ba48572f644b01378764ecceab660e547a0091))
+
 ## [1.5.41](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.5.40...v1.5.41) (2022-12-22)
 
 
