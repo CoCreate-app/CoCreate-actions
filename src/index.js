@@ -147,8 +147,8 @@ const CoCreateAction = {
                 }
                 break;
             case 'action':
-                let btn = queryDocumentSelectorAll(param);
-                if (btn) {
+                let btns = queryDocumentSelectorAll(param);
+                for (let btn of btns) {
                     btn.click();
                 }
                 break;
