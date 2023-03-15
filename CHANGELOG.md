@@ -1,3 +1,10 @@
+## [1.5.60](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.5.59...v1.5.60) (2023-03-15)
+
+
+### Bug Fixes
+
+* btn click loop ([394f558](https://github.com/CoCreate-app/CoCreate-actions/commit/394f55885a3ba591efa8ba0b90e3dabcd1f4643d))
+
 ## [1.5.59](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.5.58...v1.5.59) (2023-02-01)
 
 
