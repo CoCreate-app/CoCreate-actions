@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.6.6...v1.7.0) (2023-04-12)
+
+
+### Features
+
+* apply params to an action(params) ([5f61ccf](https://github.com/CoCreate-app/CoCreate-actions/commit/5f61ccff6a1a1ced38df453960eb18e958f1b6bb))
+
 ## [1.6.6](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.6.5...v1.6.6) (2023-04-11)
 
 
