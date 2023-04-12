@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.7.0...v1.7.1) (2023-04-12)
+
+
+### Bug Fixes
+
+* update param to params ([44dbf74](https://github.com/CoCreate-app/CoCreate-actions/commit/44dbf7451613fc77a41d6c0489a9e9036e1111ee))
+
 # [1.7.0](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.6.6...v1.7.0) (2023-04-12)
 
 
