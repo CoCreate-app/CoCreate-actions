@@ -3,138 +3,101 @@ import { queryDocumentSelectorAll } from '@cocreate/utils'
 const CoCreateAction = {
     attribute: 'actions',
     actions: {},
-    selectedStage: [],
-    stageIndex: 0,
-    selectedElement: null,
-    completedEventName: 'completedEvent',
-
-    init: function({ name, callback, endEvent }) {
-        this.registerEvent(name, callback, null, endEvent);
-    },
 
     /**
-     * key: string
-     * runFunc: function
-     * instance: object
+     * name: string
+     * callback: function
      * endEvent: string
      **/
-    registerEvent: function(key, runFunc, instance, endEvent) {
-        if (this.actions[key]) {
+    init: function(name, callback, endEvent) {
+        if (this.actions[name])
             return;
+
+        this.actions[name] = {
+            name,
+            callback,
+            endEvent: endEvent || name
         }
 
-        this.actions[key] = {
-            key: key,
-            runFunc: runFunc,
-            instance: instance || window,
-            endEvent: endEvent
-        }
 
         for (let __key in this.actions) {
-            if (__key != key && this.actions[__key]['endEvent'] === endEvent) {
+            if (__key != name && this.actions[__key]['endEvent'] === endEvent)
                 return;
-            }
         }
-
-        const _this = this;
-        document.addEventListener(endEvent, function(e) {
-            _this.__nextAction(endEvent, e.detail)
-        });
     },
 
     initActions: function() {
         const self = this;
         document.addEventListener('click', function(event) {
             let btn = event.target;
-            if (!btn.getAttribute('actions')) {
+            if (!btn.getAttribute('actions'))
                 btn = event.target.closest('[actions]');
-            }
+
             if (!btn) return;
             event.preventDefault();
 
             let actions = (btn.getAttribute(self.attribute) || "").replace(/\s/g, '').split(',');
             if (actions.length == 0) return;
-            self.stageIndex = 0;
 
-            //. run function
-            self.selectedElement = btn;
-            const actionParameters = new Map();
-            self.selectedElement.actionParams = actionParameters;
-            const tempActions = [];
+            let index = 0;
+            let stagedActions = [];
             for (let action of actions) {
-                let param;
-                [action, param] = action.split('(')
-                if (param) {
-                    // const actionParams = new Map();
+                let [name, param] = action.split('(')
+                if (param)
                     param = param.substring(0, (param.length - 1))
-                    self.selectedElement.actionParams.set(action, param);
-                }
-                tempActions.push(action)
+
+                stagedActions.push({name, param})        
             }
-            self.selectedStage = tempActions;
-            // console.log(self.selectedElement.actionParams)
-            self.__runAction();
+
+            self.__runAction(stagedActions, index, btn);
         })
     },
 
-    __runAction: function(data) {
+    __runAction: function(actions, index, btn) {
 
-        if (this.stageIndex >= this.selectedStage.length) {
+        if (index >= actions.length) {
 
-            if (this.stageIndex == this.selectedStage.length) {
-                this.__runLink(this.selectedElement);
+            if (index == actions.length) {
+                this.__runLink(btn);
             }
             return;
         }
 
-        const actionName = this.selectedStage[this.stageIndex];
-        //. run function
+        const currentAction = actions[index];
+        if (!currentAction) return
+        const actionName = currentAction.name
         const action = this.actions[actionName];
+
         if (action) {
-            if (action.runFunc) {
-                action.runFunc.call(null, this.selectedElement, data);
-            }
-            else {
-                this.__nextAction(action.endEvent, {});
-            }
+            const self = this
+            document.addEventListener(action.endEvent, function() {
+                self.__runNextAction(actions, index, btn);
+            }, { once: true });
+
+            if (action.callback)
+                action.callback.call(null, btn, currentAction.param);
+            else
+                this.__runNextAction(actions, index, btn);            
+
         }
         else {
-            let status = this.__runSpecialAction(actionName, data);
+            let status = this.__runSpecialAction(actions, index, btn, actionName, currentAction.param);
             if (status === "next") {
-                this.__runNextAction();
+                this.__runNextAction(actions, index, btn);
             }
         }
     },
 
-    __nextAction: function(eventName, data) {
-        const key = this.selectedStage[this.stageIndex];
-        if (!key) {
-            return;
-        }
-        if (eventName !== this.actions[key].endEvent) {
-            return;
-        }
-        this.__runNextAction(data);
-    },
-
-    __runSpecialAction: function(actionName, data) {
-        let matches = /(\w+)\{([a-zA-Z0-9_ \-#$.]+)\}/gm.exec(actionName)
-
-        if (!matches || matches.length < 3) {
-            return "next";
-        }
-
-        let type = matches[1],
-            param = matches[2].trim()
+    __runSpecialAction: function(actions, index, btn, actionName, param) {
         if (!param) return "next";
 
         const self = this;
-        switch (type) {
+        switch (actionName) {
             case 'event':
                 console.log("Waiting Event....");
-                document.addEventListener(param, (eventData) => {
+                document.addEventListener(param, () => {
                     console.log('Event Action (Received event from other section) ====== ' + param);
-                    self.__runNextAction(eventData);
+                    self.__runNextAction(actions, index, btn);
                 }, { once: true })
                 break;
             case 'timeout':
@@ -142,7 +105,7 @@ const CoCreateAction = {
                 if (delayTime > 0) {
                     setTimeout(function() {
                         console.log("Timeout ======= " + param)
-                        self.__runNextAction(data);
+                        self.__runNextAction(actions, index, btn);
                     }, parseInt(param));
                 }
                 break;
@@ -157,9 +120,8 @@ const CoCreateAction = {
         }
     },
 
-    __runNextAction: function(data) {
-        this.stageIndex++;
-        this.__runAction(data);
+    __runNextAction: function(actions, index, btn) {
+        this.__runAction(actions, index += 1, btn);
     },
 
     __runLink: function(element) {
