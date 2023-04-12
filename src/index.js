@@ -42,11 +42,11 @@ const CoCreateAction = {
             let index = 0;
             let stagedActions = [];
             for (let action of actions) {
-                let [name, param] = action.split('(')
-                if (param)
-                    param = param.substring(0, (param.length - 1))
+                let [name, params] = action.split('(')
+                if (params)
+                    params = params.substring(0, (params.length - 1))
 
-                stagedActions.push({name, param})        
+                stagedActions.push({name, params})        
             }
 
             self.__runAction(stagedActions, index, btn);
@@ -75,42 +75,42 @@ const CoCreateAction = {
             }, { once: true });
 
             if (action.callback)
-                action.callback.call(null, btn, currentAction.param);
+                action.callback.call(null, btn, currentAction.params);
             else
                 this.__runNextAction(actions, index, btn);            
 
         }
         else {
-            let status = this.__runSpecialAction(actions, index, btn, actionName, currentAction.param);
+            let status = this.__runSpecialAction(actions, index, btn, actionName, currentAction.params);
             if (status === "next") {
                 this.__runNextAction(actions, index, btn);
             }
         }
     },
 
-    __runSpecialAction: function(actions, index, btn, actionName, param) {
-        if (!param) return "next";
+    __runSpecialAction: function(actions, index, btn, actionName, params) {
+        if (!params) return "next";
 
         const self = this;
         switch (actionName) {
             case 'event':
                 console.log("Waiting Event....");
-                document.addEventListener(param, () => {
-                    console.log('Event Action (Received event from other section) ====== ' + param);
+                document.addEventListener(params, () => {
+                    console.log('Event Action (Received event from other section) ====== ' + params);
                     self.__runNextAction(actions, index, btn);
                 }, { once: true })
                 break;
             case 'timeout':
-                let delayTime = parseInt(param);
+                let delayTime = parseInt(params);
                 if (delayTime > 0) {
                     setTimeout(function() {
-                        console.log("Timeout ======= " + param)
+                        console.log("Timeout ======= " + params)
                         self.__runNextAction(actions, index, btn);
-                    }, parseInt(param));
+                    }, parseInt(params));
                 }
                 break;
             case 'action':
-                let btns = queryDocumentSelectorAll(param);
+                let btns = queryDocumentSelectorAll(params);
                 for (let btn of btns) {
                     btn.click();
                 }
