@@ -9,7 +9,7 @@ const CoCreateAction = {
      * callback: function
      * endEvent: string
      **/
-    init: function(name, callback, endEvent) {
+    init: function({name, callback, endEvent}) {
         if (this.actions[name])
             return;
 
