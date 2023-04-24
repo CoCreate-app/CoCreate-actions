@@ -1,3 +1,10 @@
+## [1.8.3](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.8.2...v1.8.3) (2023-04-24)
+
+
+### Bug Fixes
+
+* workflow node version updated  16 ([50acb1d](https://github.com/CoCreate-app/CoCreate-actions/commit/50acb1dcf9584c049561772526d0f0ddbf80c511))
+
 ## [1.8.2](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.8.1...v1.8.2) (2023-04-24)
 
 
