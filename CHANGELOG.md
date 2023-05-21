@@ -1,3 +1,10 @@
+## [1.8.12](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.8.11...v1.8.12) (2023-05-21)
+
+
+### Bug Fixes
+
+* Update dependencies versions for [@cocreate](https://github.com/cocreate) libraries ([d956c47](https://github.com/CoCreate-app/CoCreate-actions/commit/d956c475f341c1a53f977da610eeec2fa16004e5))
+
 ## [1.8.11](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.8.10...v1.8.11) (2023-05-19)
 
 
