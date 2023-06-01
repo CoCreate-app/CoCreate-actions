@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Actions | CoCreateJS</title>
-    
-    <!-- CoCreate Favicon -->
-    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-    <link rel="manifest" href="/manifest.webmanifest">
-  </head>
-  <body>
-  
-    <form>
-      <button type="button" id="id-one" actions="timeout(12000), action(#id-two)">click</button>
-    </form>
-    <form>
-      <button type="button" actions="timeout(1000), timeout(2000), timeout(5000)">click</button>
-    </form>
-    
-    <form>
-     <input render-key="render.company" value="Paper Company">
-      <button id="id-two" type="button" actions="timeout(1000), action(#id-three)" hidden>click</button>
-    </form>
-    
-    <form>
-      <input render-key="render.name" value="Micheal Scott">
-      <button id="id-three" type="button" actions="timeout(4000), renderKey" hidden>click</button>
-    </form>
+    <head>
+        <title>Actions | CoCreateJS</title>
 
-    
-    <!--<script src="../dist/CoCreate-actions.js" ></script>-->
-    <script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>
-  </body>
+        <!-- CoCreate Favicon -->
+        <link
+            rel="icon"
+            href="https://cdn.cocreate.app/favicon.ico"
+            type="image/ico"
+            sizes="16x16" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+    </head>
+    <body>
+        <form>
+            <button
+                type="button"
+                id="id-one"
+                actions="timeout(12000), action(#id-two)">
+                click
+            </button>
+        </form>
+        <form>
+            <button
+                type="button"
+                actions="timeout(1000), timeout(2000), timeout(5000)">
+                click
+            </button>
+        </form>
+
+        <form>
+            <input render-key="render.company" value="Paper Company" />
+            <button
+                id="id-two"
+                type="button"
+                actions="timeout(1000), action(#id-three)"
+                hidden>
+                click
+            </button>
+        </form>
+
+        <form>
+            <input render-key="render.name" value="Micheal Scott" />
+            <button
+                id="id-three"
+                type="button"
+                actions="timeout(4000), renderKey"
+                hidden>
+                click
+            </button>
+        </form>
+
+        <!--<script src="../dist/CoCreate-actions.js"  ></script>-->
+        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+    </body>
 </html>
