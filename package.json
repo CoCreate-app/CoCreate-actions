@@ -48,7 +48,6 @@
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
-    "@cocreate/cli": "^1.33.0",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "file-loader": "^6.2.0",
@@ -60,6 +59,7 @@
     "webpack-log": "^3.0.1"
   },
   "dependencies": {
+    "@cocreate/cli": "^1.33.0",
     "@cocreate/utils": "^1.21.5"
   }
 }
