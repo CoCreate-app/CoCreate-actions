@@ -1,3 +1,11 @@
+## [1.8.27](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.8.26...v1.8.27) (2023-06-11)
+
+
+### Bug Fixes
+
+* testing workflow ([19920f1](https://github.com/CoCreate-app/CoCreate-actions/commit/19920f18e9c69e21f28f2a5b78cadbefa4d9cc57))
+* testing workflow ([fcf54d3](https://github.com/CoCreate-app/CoCreate-actions/commit/fcf54d36f5e7893a3135485b9284d840793095f5))
+
 ## [1.8.26](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.8.25...v1.8.26) (2023-06-11)
 
 
