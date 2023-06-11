@@ -1,3 +1,10 @@
+## [1.8.23](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.8.22...v1.8.23) (2023-06-11)
+
+
+### Bug Fixes
+
+* @cocreate/cli moved to dependencies ([be8fa83](https://github.com/CoCreate-app/CoCreate-actions/commit/be8fa831a7a9dab68d42d96ce42b4629fd0152eb))
+
 ## [1.8.22](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.8.21...v1.8.22) (2023-06-11)
 
 
