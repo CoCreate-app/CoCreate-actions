@@ -1,3 +1,10 @@
+## [1.8.24](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.8.23...v1.8.24) (2023-06-11)
+
+
+### Bug Fixes
+
+* postintall error ([4d9cbe3](https://github.com/CoCreate-app/CoCreate-actions/commit/4d9cbe31f66e47c063c1cfff16fe877c7ad4affb))
+
 ## [1.8.23](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.8.22...v1.8.23) (2023-06-11)
 
 
