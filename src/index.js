@@ -10,19 +10,18 @@ const CoCreateAction = {
      * endEvent: string
      **/
     init: function ({ name, callback, endEvent }) {
-        if (this.actions[name])
-            return;
+        if (!Array.isArray(name))
+            name = [name]
+        for (let i = 0; i < name.length; i++) {
+            if (this.actions[name[i]])
+                continue;
 
-        this.actions[name] = {
-            name,
-            callback,
-            endEvent: endEvent || name
-        }
+            this.actions[name[i]] = {
+                name: name[i],
+                callback,
+                endEvent: endEvent || name[i]
+            }
 
-
-        for (let __key in this.actions) {
-            if (__key != name && this.actions[__key]['endEvent'] === endEvent)
-                return;
         }
     },
 
