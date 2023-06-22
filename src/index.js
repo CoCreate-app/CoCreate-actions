@@ -9,7 +9,7 @@ const CoCreateAction = {
      * callback: function
      * endEvent: string
      **/
-    init: function({name, callback, endEvent}) {
+    init: function ({ name, callback, endEvent }) {
         if (this.actions[name])
             return;
 
@@ -26,9 +26,9 @@ const CoCreateAction = {
         }
     },
 
-    initActions: function() {
+    initActions: function () {
         const self = this;
-        document.addEventListener('click', function(event) {
+        document.addEventListener('click', function (event) {
             let btn = event.target;
             if (!btn.getAttribute('actions'))
                 btn = event.target.closest('[actions]');
@@ -46,14 +46,14 @@ const CoCreateAction = {
                 if (params)
                     params = params.substring(0, (params.length - 1))
 
-                stagedActions.push({name, params})        
+                stagedActions.push({ name, params })
             }
 
             self.__runAction(stagedActions, index, btn);
         })
     },
 
-    __runAction: function(actions, index, btn) {
+    __runAction: function (actions, index, btn) {
 
         if (index >= actions.length) {
 
@@ -70,14 +70,14 @@ const CoCreateAction = {
 
         if (action) {
             const self = this
-            document.addEventListener(action.endEvent, function() {
+            document.addEventListener(action.endEvent, function () {
                 self.__runNextAction(actions, index, btn);
             }, { once: true });
 
             if (action.callback)
-                action.callback.call(null, btn, currentAction.params);
+                action.callback.call(null, { element: btn, ...currentAction });
             else
-                this.__runNextAction(actions, index, btn);            
+                this.__runNextAction(actions, index, btn);
 
         }
         else {
@@ -88,7 +88,7 @@ const CoCreateAction = {
         }
     },
 
-    __runSpecialAction: function(actions, index, btn, actionName, params) {
+    __runSpecialAction: function (actions, index, btn, actionName, params) {
         if (!params) return "next";
 
         const self = this;
@@ -103,7 +103,7 @@ const CoCreateAction = {
             case 'timeout':
                 let delayTime = parseInt(params);
                 if (delayTime > 0) {
-                    setTimeout(function() {
+                    setTimeout(function () {
                         console.log("Timeout ======= " + params)
                         self.__runNextAction(actions, index, btn);
                     }, parseInt(params));
@@ -120,11 +120,11 @@ const CoCreateAction = {
         }
     },
 
-    __runNextAction: function(actions, index, btn) {
+    __runNextAction: function (actions, index, btn) {
         this.__runAction(actions, index += 1, btn);
     },
 
-    __runLink: function(element) {
+    __runLink: function (element) {
         let link = element.closest('[href], [target], [pass_to]');
         if (!link) {
             let link = element.querySelector('[href], [target], [pass_to]');
@@ -134,7 +134,7 @@ const CoCreateAction = {
         this.__run(link);
     },
 
-    __run: function(link) {
+    __run: function (link) {
         if (typeof CoCreate.link !== 'undefined') {
             CoCreate.link.runLink(link)
         }
