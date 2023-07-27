@@ -1,4 +1,4 @@
-import { queryDocumentSelectorAll } from '@cocreate/utils'
+import { queryElements } from '@cocreate/utils'
 
 const CoCreateAction = {
     attribute: 'actions',
@@ -113,7 +113,7 @@ const CoCreateAction = {
                 }
                 break;
             case 'action':
-                let btns = queryDocumentSelectorAll(params);
+                let btns = queryElements({ element: btn, selector: params, type: 'selector' });
                 for (let btn of btns) {
                     btn.click();
                 }
