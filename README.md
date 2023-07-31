@@ -1,6 +1,6 @@
 # CoCreate-action
 
-A convenient chain handler allows user to chain multiple CoCreate components together. When one action is complete next one will start. The sequence goes untill all actions completed. Grounded on Vanilla javascript, easily configured using HTML5 attributes and/or JavaScript API. Take it for a spin in our [playground!](https://cocreate.app/docs/actions)
+Chain multiple component executions to generate your desired logic, when one action is complete next one will start. The sequence goes until all actions have been completed. Vanilla javascript, easily configured using HTML5 attributes and/or JavaScript API. Take it for a spin in our [playground!](https://cocreate.app/docs/actions)
 
 ![minified](https://img.badgesize.io/https://cdn.cocreate.app/actions/latest/CoCreate-actions.min.js?style=flat-square&label=minified&color=orange)
 ![gzip](https://img.badgesize.io/https://cdn.cocreate.app/actions/latest/CoCreate-actions.min.js?compression=gzip&style=flat-square&label=gzip&color=yellow)
@@ -39,12 +39,12 @@ $ yarn install @cocreate/actions
 
 # Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [Announcements](#announcements)
-- [Roadmap](#roadmap)
-- [How to Contribute](#how-to-contribute)
-- [About](#about)
-- [License](#license)
+-   [Table of Contents](#table-of-contents)
+-   [Announcements](#announcements)
+-   [Roadmap](#roadmap)
+-   [How to Contribute](#how-to-contribute)
+-   [About](#about)
+-   [License](#license)
 
 <a name="announcements"></a>
 
@@ -78,8 +78,8 @@ We want this library to be community-driven, and CoCreate led. We need your help
 
 We appreciate your continued support, thank you!
 
-
 <a name="license"></a>
+
 # License
 
 [The MIT License (MIT)](https://github.com/CoCreate-app/CoCreate-actions/blob/master/LICENSE)
