@@ -16,7 +16,7 @@
             <button
                 type="button"
                 id="id-one"
-                actions="timeout(12000), action(#id-two)">
+                actions="timeout(12000), action(document; #id-two)">
                 click
             </button>
         </form>
@@ -33,7 +33,7 @@
             <button
                 id="id-two"
                 type="button"
-                actions="timeout(1000), action(#id-three)"
+                actions="timeout(1000), action(document; #id-three)"
                 hidden>
                 click
             </button>
@@ -51,6 +51,7 @@
         </form>
 
         <!--<script src="../dist/CoCreate-actions.js"  ></script>-->
+        <!-- <script src="../../../CoCreateJS/dist/CoCreate.js"></script> -->
         <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
     </body>
 </html>
