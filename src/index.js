@@ -34,13 +34,13 @@ function initActions() {
         if (!element.getAttribute(attribute))
             element = event.target.closest(`[${attribute}]`);
 
+        if (!element) return;
         if (element.tagName === 'form') {
             const pattern = /^(https?:\/\/)?([\w.-]+)\.([a-z]{2,})(:\d{1,5})?(\/.*)?$/i;
             if (pattern.test(url))
                 return form.submit()
         }
 
-        if (!element) return;
         event.preventDefault();
 
         let actions = (element.getAttribute(attribute) || "").replace(/\s/g, '').split(',');
