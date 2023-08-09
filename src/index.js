@@ -37,7 +37,7 @@ function initActions() {
         if (!element) return;
         if (element.tagName === 'form') {
             const pattern = /^(https?:\/\/)?([\w.-]+)\.([a-z]{2,})(:\d{1,5})?(\/.*)?$/i;
-            if (pattern.test(url))
+            if (pattern.test(element.action))
                 return form.submit()
         }
 
