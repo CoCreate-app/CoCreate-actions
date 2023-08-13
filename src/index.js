@@ -60,16 +60,16 @@ function initActions() {
     })
 }
 
-function runAction(actions, index, element) {
-    if (index >= actions.length) {
-        if (index == actions.length) {
+function runAction(stagedActions, index, element) {
+    if (index >= stagedActions.length) {
+        if (index == stagedActions.length) {
             runSubmit(element)
             runLink(element);
         }
         return;
     }
 
-    const currentAction = actions[index];
+    const currentAction = stagedActions[index];
     if (!currentAction) return
 
     const actionName = currentAction.name
@@ -77,18 +77,18 @@ function runAction(actions, index, element) {
 
     if (action) {
         document.addEventListener(action.endEvent, function () {
-            runNextAction(actions, index, element);
+            runNextAction(stagedActions, index, element);
         }, { once: true });
 
         if (action.callback)
             action.callback.call(null, { element, ...currentAction });
         else
-            runNextAction(actions, index, element);
+            runNextAction(stagedActions, index, element);
 
     } else {
-        let status = runSpecialAction(actions, index, element, actionName, currentAction.params);
+        let status = runSpecialAction(stagedActions, index, element, actionName, currentAction.params);
         if (status === "next") {
-            runNextAction(actions, index, element);
+            runNextAction(stagedActions, index, element);
         }
     }
 }
