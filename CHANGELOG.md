@@ -1,3 +1,26 @@
+# [1.9.0](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.8.32...v1.9.0) (2023-08-16)
+
+
+### Bug Fixes
+
+* crud attributes renamed ([c52563d](https://github.com/CoCreate-app/CoCreate-actions/commit/c52563d7fd9cd436695734bd31a4fb0a83709f89))
+* if no element return, before checking element properties ([702e6b1](https://github.com/CoCreate-app/CoCreate-actions/commit/702e6b1fb8c1a22476da4e264dd6e0a430d149dc))
+* Refactor runAction for better readability and clarity ([1387318](https://github.com/CoCreate-app/CoCreate-actions/commit/1387318ab2248278dbefd727fbd0e6ea6e0a2eb8))
+* replace -target -selector ([b02b94f](https://github.com/CoCreate-app/CoCreate-actions/commit/b02b94f619ecc3713afcefdfa9daa39b05c7056b))
+* update description ([4816470](https://github.com/CoCreate-app/CoCreate-actions/commit/4816470509afba16f295d3e52d83651de4d84346))
+* Update URL verification logic in initActions() ([a215ecb](https://github.com/CoCreate-app/CoCreate-actions/commit/a215ecb7273a0bc4164556d096763cbf6aa6c543))
+* updated actions callback data object ([bbb818c](https://github.com/CoCreate-app/CoCreate-actions/commit/bbb818c3edd49dd6d06d3de0255637f0019a1384))
+* webpack.config and package.json make use of mode=production instead of process.env ([148aac1](https://github.com/CoCreate-app/CoCreate-actions/commit/148aac16f713845075d482d7d70427de8e4689a0))
+
+
+### Features
+
+* name attribute and variable renamed to key ([00186e1](https://github.com/CoCreate-app/CoCreate-actions/commit/00186e193f57364276ffb818fae3763a0f5420f7))
+* name can be a string or an array of strings. ([1504e20](https://github.com/CoCreate-app/CoCreate-actions/commit/1504e209365323d19a455ad357a10cea561c56a2))
+* Refactor element query function in index.js ([07e15cf](https://github.com/CoCreate-app/CoCreate-actions/commit/07e15cf5b150906f43d7dfcf7449e8eb8d91022c))
+* Refactor implementation of `init` method to accept an object or an array of objects and process each object to create new action items. ([f8a2f9d](https://github.com/CoCreate-app/CoCreate-actions/commit/f8a2f9da60816baed260b4007a5f23a9b189045b))
+* support type="submit" and form.action ([2bd2e26](https://github.com/CoCreate-app/CoCreate-actions/commit/2bd2e26b28d3a7453ed4018b4155e4f29ae4b469))
+
 ## [1.8.32](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.8.31...v1.8.32) (2023-06-14)
 
 
