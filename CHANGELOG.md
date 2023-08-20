@@ -1,3 +1,16 @@
+## [1.10.1](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.10.0...v1.10.1) (2023-08-20)
+
+
+### Bug Fixes
+
+* formating ([a36720a](https://github.com/CoCreate-app/CoCreate-actions/commit/a36720a784f6bf7ca685b92955bff68fe5f2665b))
+* replace cdn with /dist ([5fec6b7](https://github.com/CoCreate-app/CoCreate-actions/commit/5fec6b724749bc028248fd447f9b531d96fcb605))
+* update workflow ([0fb9ed0](https://github.com/CoCreate-app/CoCreate-actions/commit/0fb9ed0df65a98e99512ef78202f162d2dbf89a8))
+* update workflow ([e14d3c0](https://github.com/CoCreate-app/CoCreate-actions/commit/e14d3c05ba0321a2ae281fbc8781a98510d08d2b))
+* update workflow ([3bac946](https://github.com/CoCreate-app/CoCreate-actions/commit/3bac9462562ae54e9eeb32249d4a733ae3982db8))
+* update workflow to use coc upload effectively replacing doc and s3 ([a211c35](https://github.com/CoCreate-app/CoCreate-actions/commit/a211c3521c3adf2656acb3700285638052b53510))
+* update workflow to use coc upload effectively replacing doc and s3 ([f78aa14](https://github.com/CoCreate-app/CoCreate-actions/commit/f78aa1454352a12c39d1acaffa22e7a9dce0ef32))
+
 # [1.10.0](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.9.0...v1.10.0) (2023-08-17)
 
 
