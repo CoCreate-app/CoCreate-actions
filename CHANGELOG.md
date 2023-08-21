@@ -1,3 +1,10 @@
+## [1.10.2](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.10.1...v1.10.2) (2023-08-21)
+
+
+### Bug Fixes
+
+* /dist/CoCreate.js updated to https://CoCreate.app/dist/CoCreate.js ([1336174](https://github.com/CoCreate-app/CoCreate-actions/commit/1336174df82919c4bffe9cbd7aefb5829788af92))
+
 ## [1.10.1](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.10.0...v1.10.1) (2023-08-20)
 
 
