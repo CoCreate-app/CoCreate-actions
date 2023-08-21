@@ -1,6 +1,6 @@
 {
   "name": "@cocreate/actions",
-  "version": "1.10.2",
+  "version": "1.11.0",
   "description": "Chain multiple component executions to generate your desired logic, when one action is complete next one will start. The sequence goes until all actions have been completed. Vanilla javascript, easily configured using HTML5 attributes and/or JavaScript API.",
   "keywords": [
     "actions",
