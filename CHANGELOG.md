@@ -1,3 +1,10 @@
+## [1.11.3](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.11.2...v1.11.3) (2023-10-09)
+
+
+### Bug Fixes
+
+* bump cocreate dependency versions ([79f4f86](https://github.com/CoCreate-app/CoCreate-actions/commit/79f4f86c8fc52a30eebee317379be8926b704955))
+
 ## [1.11.2](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.11.1...v1.11.2) (2023-09-18)
 
 
