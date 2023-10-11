@@ -157,7 +157,7 @@ function runLink(element) {
 
 function run(link) {
     if (typeof CoCreate.link !== 'undefined') {
-        CoCreate.link.runLink(link)
+        CoCreate.link.open(link)
     } else if (link.hasAttribute('href')) {
         window.location.href = link.getAttribute('href');
     }
