@@ -1,3 +1,11 @@
+## [1.11.7](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.11.6...v1.11.7) (2023-10-14)
+
+
+### Bug Fixes
+
+* bump dependencies ([7f06eb8](https://github.com/CoCreate-app/CoCreate-actions/commit/7f06eb8ebbb056c8e9aaec78063fe43072da4648))
+* link.runLink updated to link.open ([04d75e9](https://github.com/CoCreate-app/CoCreate-actions/commit/04d75e9a22c057bc20d66a67b9af22d245827e43))
+
 ## [1.11.6](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.11.5...v1.11.6) (2023-10-09)
 
 
