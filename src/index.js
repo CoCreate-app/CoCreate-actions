@@ -80,9 +80,10 @@ function runAction(stagedActions, index, element) {
             runNextAction(stagedActions, index, element);
         }, { once: true });
 
-        if (action.callback)
-            action.callback.call(null, { element, ...currentAction });
-        else
+        if (action.callback) {
+            const form = element.closest('form')
+            action.callback.call(null, { element, form, ...currentAction });
+        } else
             runNextAction(stagedActions, index, element);
 
     } else {
