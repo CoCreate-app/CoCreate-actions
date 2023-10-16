@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.11.7...v1.12.0) (2023-10-16)
+
+
+### Features
+
+* return param form: elements.closest('form') ([3dc06ac](https://github.com/CoCreate-app/CoCreate-actions/commit/3dc06acfc4006c68bf1be08fd9855012d764104b))
+
 ## [1.11.7](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.11.6...v1.11.7) (2023-10-14)
 
 
