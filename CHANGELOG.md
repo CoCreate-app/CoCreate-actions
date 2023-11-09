@@ -1,3 +1,11 @@
+## [1.12.3](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.12.2...v1.12.3) (2023-11-09)
+
+
+### Bug Fixes
+
+* meta name typo ([4ea37a6](https://github.com/CoCreate-app/CoCreate-actions/commit/4ea37a6b9641fa2edb237cae11f04396c71b6f42))
+* update host ([4b5b8d9](https://github.com/CoCreate-app/CoCreate-actions/commit/4b5b8d9af673175e5348ffe9a94d55031a53accd))
+
 ## [1.12.2](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.12.1...v1.12.2) (2023-11-03)
 
 
