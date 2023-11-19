@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.12.4...v1.13.0) (2023-11-19)
+
+
+### Features
+
+* update dependecies for th latest features and bug fixes ([3ed4a52](https://github.com/CoCreate-app/CoCreate-actions/commit/3ed4a52fabfaa9ee5db843d769cf45efd2310cd5))
+
 ## [1.12.4](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.12.3...v1.12.4) (2023-11-12)
 
 
