@@ -149,9 +149,9 @@ function runSubmit(element) {
 }
 
 function runLink(element) {
-    let link = element.closest('[href], [target], [pass_to]');
+    let link = element.closest('[href], [target], [state_to]');
     if (!link)
-        link = element.querySelector('[href], [target], [pass_to]');
+        link = element.querySelector('[href], [target], [state_to]');
     if (link)
         run(link);
 }
