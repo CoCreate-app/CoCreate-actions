@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.14.0...v1.15.0) (2023-11-25)
+
+
+### Features
+
+* upgrade dependencies for latest features and fixes ([6e2334c](https://github.com/CoCreate-app/CoCreate-actions/commit/6e2334cc55fcbd8ddace597616bde632f3d4842b))
+
 # [1.14.0](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.13.0...v1.14.0) (2023-11-25)
 
 
