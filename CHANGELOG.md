@@ -1,3 +1,16 @@
+# [1.14.0](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.13.0...v1.14.0) (2023-11-25)
+
+
+### Bug Fixes
+
+* pass attributes renamed to state ([0019e12](https://github.com/CoCreate-app/CoCreate-actions/commit/0019e1277bba4fe78f9b76cfcb153cb9b4220552))
+* update nav, edit button and css path ([c7e4be0](https://github.com/CoCreate-app/CoCreate-actions/commit/c7e4be03107a0e6b77e0096a102ffba31dd866bf))
+
+
+### Features
+
+* upgrade dependencies for latest features and fixes ([5a69e1c](https://github.com/CoCreate-app/CoCreate-actions/commit/5a69e1c95be7894b3da3cb9d1bdbce87d4059a91))
+
 # [1.13.0](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.12.4...v1.13.0) (2023-11-19)
 
 
