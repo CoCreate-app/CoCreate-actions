@@ -1,4 +1,4 @@
-# CoCreate-action
+# CoCreate-actions
 
 Chain multiple component executions to generate your desired logic, when one action is complete next one will start. The sequence goes until all actions have been completed. Vanilla javascript, easily configured using HTML5 attributes and/or JavaScript API. Take it for a spin in our [playground!](https://cocreate.app/docs/actions)
 
