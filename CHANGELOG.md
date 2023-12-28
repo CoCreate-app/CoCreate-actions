@@ -1,3 +1,10 @@
+## [1.15.1](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.15.0...v1.15.1) (2023-12-28)
+
+
+### Bug Fixes
+
+* typo ([92c6ce6](https://github.com/CoCreate-app/CoCreate-actions/commit/92c6ce656d3c177357175737c94e1aa8d6ceb913))
+
 # [1.15.0](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.14.0...v1.15.0) (2023-11-25)
 
 
