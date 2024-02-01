@@ -72,7 +72,13 @@ function runAction(stagedActions, index, element) {
     const currentAction = stagedActions[index];
     if (!currentAction) return
 
-    const actionName = currentAction.name
+    let actionName = currentAction.name
+    if (actionName.includes('.')) {
+        let name = actionName.split('.')[0]
+        currentAction.method = actionName.substring(name.length + 1)
+        currentAction.name = actionName = name
+    }
+
     const action = actions[actionName];
 
     if (action) {
