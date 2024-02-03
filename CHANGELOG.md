@@ -1,3 +1,10 @@
+# [1.17.0](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.16.0...v1.17.0) (2024-02-03)
+
+
+### Features
+
+* actions containg '.' will as name and method ([7f9cf9c](https://github.com/CoCreate-app/CoCreate-actions/commit/7f9cf9c4358985314170b106006b7cd4d12b1b85))
+
 # [1.16.0](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.15.1...v1.16.0) (2024-01-08)
 
 
