@@ -102,7 +102,7 @@ function runAction(stagedActions, index, element) {
 
 function runSpecialAction(actions, index, element, actionName, params) {
     if (!params) return "next";
-
+    let elements
     switch (actionName) {
         case 'event':
             console.log("Waiting Event....");
@@ -121,9 +121,18 @@ function runSpecialAction(actions, index, element, actionName, params) {
             }
             break;
         case 'action':
-            let elements = queryElements({ element, selector: params, type: 'selector' });
+            elements = queryElements({ element, selector: params, type: 'selector' });
             for (let i = 0; i < elements.length; i++) {
                 elements[i].click();
+            }
+            break;
+        case 'read':
+        case 'save':
+        case 'renderValue':
+            elements = queryElements({ element, selector: params, type: 'selector' });
+            for (let i = 0; i < elements.length; i++) {
+                if (elements[i][actionName])
+                    elements[i][actionName]();
             }
             break;
         case 'submit':
