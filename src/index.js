@@ -102,16 +102,19 @@ function runAction(stagedActions, index, element) {
 
 function runSpecialAction(actions, index, element, actionName, params) {
     if (!params) return "next";
-    let elements
+    let elements, status = "next"
     switch (actionName) {
         case 'event':
             console.log("Waiting Event....");
+            status = ""
             document.addEventListener(params, () => {
                 console.log('Event Action (Received event from other section) ====== ' + params);
                 runNextAction(actions, index, element);
             }, { once: true })
             break;
         case 'timeout':
+            status = ""
+
             let delayTime = parseInt(params);
             if (delayTime > 0) {
                 setTimeout(function () {
@@ -141,8 +144,14 @@ function runSpecialAction(actions, index, element, actionName, params) {
                 form.click();
             break;
         default:
-            return "next";
+            elements = queryElements({ element, selector: params, type: 'selector' });
+            for (let i = 0; i < elements.length; i++) {
+                if (elements[i][actionName])
+                    elements[i][actionName]();
+            }
     }
+
+    return status
 }
 
 function runNextAction(actions, index, element) {
