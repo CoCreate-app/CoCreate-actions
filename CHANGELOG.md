@@ -1,3 +1,15 @@
+# [1.18.0](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.17.1...v1.18.0) (2024-03-18)
+
+
+### Bug Fixes
+
+* add flag status to trigger next action ([3600a6b](https://github.com/CoCreate-app/CoCreate-actions/commit/3600a6b4d71b19bcf7005974d43671f711dac8b5))
+
+
+### Features
+
+* read(selector), save(selector), renderValue(selector) actions ([a1416c5](https://github.com/CoCreate-app/CoCreate-actions/commit/a1416c5d597be7181485a2a73e3ed55dd9d42686))
+
 ## [1.17.1](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.17.0...v1.17.1) (2024-02-05)
 
 
