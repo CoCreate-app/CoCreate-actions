@@ -184,7 +184,14 @@ function run(link) {
     if (typeof CoCreate.link !== 'undefined') {
         CoCreate.link.open(link)
     } else if (link.hasAttribute('href')) {
-        window.location.href = link.getAttribute('href');
+        let href = link.getAttribute('href') || '';
+        // Normalize both URLs to compare paths in a uniform way
+        const currentPath = new URL(location.href).pathname.replace('/index.html', '/');
+        const targetPath = new URL(href, location.href).pathname.replace('/index.html', '/');
+
+        if (currentPath !== targetPath) {
+            location.href = href;
+        }
     }
 }
 
