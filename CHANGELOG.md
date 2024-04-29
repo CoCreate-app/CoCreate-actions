@@ -1,3 +1,10 @@
+## [1.18.1](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.18.0...v1.18.1) (2024-04-29)
+
+
+### Bug Fixes
+
+* check if url is not the same as current prior to applying location.href ([ca77556](https://github.com/CoCreate-app/CoCreate-actions/commit/ca7755649cc769983932247e0821143b03d8f740))
+
 # [1.18.0](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.17.1...v1.18.0) (2024-03-18)
 
 
