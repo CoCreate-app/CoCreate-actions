@@ -1,3 +1,11 @@
+## [1.18.3](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.18.2...v1.18.3) (2024-06-12)
+
+
+### Bug Fixes
+
+* bump cocreate dependencies ([2a031e3](https://github.com/CoCreate-app/CoCreate-actions/commit/2a031e3f7997d52b0619a739ad3be7401e1d21f6))
+* svg icon class ([c7be8dd](https://github.com/CoCreate-app/CoCreate-actions/commit/c7be8dd7cb0bd1ba06c62d33b507d55259aa69c0))
+
 ## [1.18.2](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.18.1...v1.18.2) (2024-04-29)
 
 
