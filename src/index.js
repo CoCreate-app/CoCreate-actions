@@ -1,4 +1,5 @@
 import { queryElements } from '@cocreate/utils'
+import uuid from '@cocreate/uuid'
 
 const attribute = 'actions'
 const actions = {}
@@ -77,12 +78,13 @@ function runAction(stagedActions, index, element) {
         let name = actionName.split('.')[0]
         currentAction.method = actionName.substring(name.length + 1)
         currentAction.name = actionName = name
+        currentAction.endEvent = uuid.generate(6)
     }
 
     const action = actions[actionName];
 
     if (action) {
-        document.addEventListener(action.endEvent, function () {
+        document.addEventListener(currentAction.endEvent || action.endEvent, function () {
             runNextAction(stagedActions, index, element);
         }, { once: true });
 
