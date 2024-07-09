@@ -1,3 +1,10 @@
+# [1.19.0](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.18.5...v1.19.0) (2024-07-09)
+
+
+### Features
+
+* dynamically add endEvent uuid for actions with methods ([08ab801](https://github.com/CoCreate-app/CoCreate-actions/commit/08ab801d2650696aca009b53f8aa33267c5b4727))
+
 ## [1.18.5](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.18.4...v1.18.5) (2024-06-23)
 
 
