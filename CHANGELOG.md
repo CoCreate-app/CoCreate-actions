@@ -1,3 +1,10 @@
+## [1.19.1](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.19.0...v1.19.1) (2024-08-24)
+
+
+### Bug Fixes
+
+* docs ([c7028a3](https://github.com/CoCreate-app/CoCreate-actions/commit/c7028a32eec72899e7936e6803228f5af29e82d1))
+
 # [1.19.0](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.18.5...v1.19.0) (2024-07-09)
 
 
