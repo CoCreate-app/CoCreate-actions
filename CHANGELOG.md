@@ -1,3 +1,10 @@
+## [1.20.1](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.20.0...v1.20.1) (2024-12-14)
+
+
+### Bug Fixes
+
+* improved action attribute split and trim using regex ([70f5d30](https://github.com/CoCreate-app/CoCreate-actions/commit/70f5d30054872f032c300ca2c4cb41db0730620d))
+
 # [1.20.0](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.19.1...v1.20.0) (2024-11-04)
 
 
