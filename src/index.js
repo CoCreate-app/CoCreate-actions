@@ -1,3 +1,4 @@
+import Observer from "@cocreate/observer";
 import { queryElements } from "@cocreate/utils";
 import uuid from "@cocreate/uuid";
 
@@ -25,35 +26,57 @@ function init(data) {
 	}
 }
 
-function initActions() {
-	document.addEventListener("click", function (event) {
-		let element = event.target;
-		if (!element.getAttribute(attribute))
-			element = event.target.closest(`[${attribute}]`);
+function initActions(elements) {
+	if (!elements) {
+		elements = document.querySelectorAll("[actions]");
+	} else if (
+		!(elements instanceof HTMLCollection) &&
+		!(elements instanceof NodeList) &&
+		!Array.isArray(elements)
+	) {
+		elements = [elements];
+	}
 
-		if (!element) return;
-		if (element.tagName === "form") {
-			const pattern =
-				/^(https?:\/\/)?([\w.-]+)\.([a-z]{2,})(:\d{1,5})?(\/.*)?$/i;
-			if (pattern.test(element.action)) return form.submit();
-		}
+	// Add click event listeners to elements
+	for (let i = 0; i < elements.length; i++) {
+		initEvent(elements[i]);
+	}
+}
 
-		event.preventDefault();
+function initEvent(element) {
+	element.addEventListener("click", eventFunction);
+}
 
-		let actions = (element.getAttribute(attribute) || "").split(/\s*,\s*/);
-		if (actions.length == 0) return;
+function eventFunction(event) {
+	let target = event.target;
 
-		let index = 0;
-		let stagedActions = [];
-		for (let action of actions) {
-			let [name, params] = action.split("(");
-			if (params) params = params.substring(0, params.length - 1);
+	if (!target.getAttribute(attribute)) {
+		target = event.target.closest(`[${attribute}]`);
+	}
 
-			stagedActions.push({ name, params });
-		}
+	if (!target) return;
 
-		runAction(stagedActions, index, element);
-	});
+	if (target.tagName.toLowerCase() === "form") {
+		const pattern =
+			/^(https?:\/\/)?([\w.-]+)\.([a-z]{2,})(:\d{1,5})?(\/.*)?$/i;
+		if (pattern.test(target.action)) return target.submit();
+	}
+
+	event.preventDefault();
+
+	let actions = (target.getAttribute(attribute) || "").split(/\s*,\s*/);
+	if (actions.length === 0) return;
+
+	let index = 0;
+	let stagedActions = [];
+	for (let action of actions) {
+		let [name, params] = action.split("(");
+		if (params) params = params.substring(0, params.length - 1);
+
+		stagedActions.push({ name, params });
+	}
+
+	runAction(stagedActions, index, target);
 }
 
 function runAction(stagedActions, index, element) {
@@ -79,7 +102,7 @@ function runAction(stagedActions, index, element) {
 	const action = actions[actionName];
 
 	if (action) {
-		document.addEventListener(
+		element.addEventListener(
 			currentAction.endEvent || action.endEvent,
 			function () {
 				runNextAction(stagedActions, index, element);
@@ -106,14 +129,14 @@ function runAction(stagedActions, index, element) {
 }
 
 function runSpecialAction(actions, index, element, actionName, params) {
-	if (!params) return "next";
+	if (!params && actionName !== "submit") return "next";
 	let elements,
 		status = "next";
 	switch (actionName) {
 		case "event":
 			console.log("Waiting Event....");
 			status = "";
-			document.addEventListener(
+			element.addEventListener(
 				params,
 				() => {
 					console.log(
@@ -159,8 +182,34 @@ function runSpecialAction(actions, index, element, actionName, params) {
 			}
 			break;
 		case "submit":
-			let form = closest("form");
-			if (form) form.click();
+			status = "";
+
+			let form = element.closest("form");
+			if (form) {
+				// Attach a listener for the custom "submitted" event
+				element.addEventListener(
+					"submitted",
+					(event) => {
+						runNextAction(actions, index, element);
+					},
+					{ once: true } // Ensures the event is only handled once
+				);
+
+				// Create a custom submit event with additional details
+				const submitEvent = new CustomEvent("submit", {
+					bubbles: true,
+					cancelable: true,
+					detail: {
+						element, // Add details about the triggering element
+						form // Add a reference to the form
+					}
+				});
+
+				// Dispatch the custom submit event
+				if (form.dispatchEvent(submitEvent)) {
+					form.submit(); // Proceed with form submission if the event isn't canceled
+				}
+			}
 			break;
 		default:
 			elements = queryElements({
@@ -219,6 +268,15 @@ function run(link) {
 		}
 	}
 }
+
+Observer.init({
+	name: "actions",
+	observe: ["addedNodes"],
+	selector: "[actions]",
+	callback(mutation) {
+		initActions(mutation.target);
+	}
+});
 
 initActions();
 
