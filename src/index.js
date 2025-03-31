@@ -271,7 +271,7 @@ function run(link) {
 
 Observer.init({
 	name: "actions",
-	observe: ["addedNodes"],
+	types: ["addedNodes"],
 	selector: "[actions]",
 	callback(mutation) {
 		initActions(mutation.target);
