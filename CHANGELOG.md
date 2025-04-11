@@ -1,3 +1,16 @@
+# [1.21.0](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.20.1...v1.21.0) (2025-04-11)
+
+
+### Bug Fixes
+
+* formating ([e955d0e](https://github.com/CoCreate-app/CoCreate-actions/commit/e955d0e25669edd940a0d271f00624feeff18dbf))
+* update observer observe param to type and and attributeName to attributeFilter ([b43570a](https://github.com/CoCreate-app/CoCreate-actions/commit/b43570a7951d385363105b4614ea348ec54ea7ed))
+
+
+### Features
+
+* Observe new actions. listen for end event on element instead of document, and improved handling of submit. ([1866f78](https://github.com/CoCreate-app/CoCreate-actions/commit/1866f7833554f92e395a5c496ac226a3f0c61ccc))
+
 ## [1.20.1](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.20.0...v1.20.1) (2024-12-14)
 
 
