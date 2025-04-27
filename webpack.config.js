@@ -19,14 +19,14 @@ module.exports = async (env, argv) => {
       libraryExport: 'default',
       library: ['CoCreate', 'actions'],
       globalObject: "this",
-      clean: true,
+      clean: true
     },
     plugins: [
       new MiniCssExtractPlugin({
         filename: isProduction ? '[name].min.css' : '[name].css',
       }),
       ,
-      new FileUploader(env, argv),
+      new FileUploader(env, argv)
     ],
     mode: isProduction ? "production" : "development",
     devtool: isProduction ? "source-map" : "eval-source-map",
@@ -45,7 +45,7 @@ module.exports = async (env, argv) => {
         },
         {
           test: /\.css$/i,
-          use: [MiniCssExtractPlugin.loader, "css-loader"],
+          use: [MiniCssExtractPlugin.loader, "css-loader"]
         },
       ],
     },
@@ -56,16 +56,16 @@ module.exports = async (env, argv) => {
           target: 'es2017',
           css: true
         }),
-        new CssMinimizerPlugin(),
+        new CssMinimizerPlugin()
       ],
       splitChunks: {
         cacheGroups: {
-          defaultVendors: false,
+          defaultVendors: false
         },
       }
     },
     performance: {
-      hints: isProduction ? "warning" : false,
+      hints: isProduction ? "warning" : false
     }
   };
   return config;
