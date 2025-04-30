@@ -1,3 +1,17 @@
+## [1.21.1](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.21.0...v1.21.1) (2025-04-30)
+
+
+### Bug Fixes
+
+* added css-loader ([4f2d623](https://github.com/CoCreate-app/CoCreate-actions/commit/4f2d6235236ca8f748bcbaa03a7bc86fad7379f9))
+* update query attributes ([c9e6d5b](https://github.com/CoCreate-app/CoCreate-actions/commit/c9e6d5b78705a077b58d568815ac5020f09f250c))
+* update webpack.config.js ([68d49a2](https://github.com/CoCreate-app/CoCreate-actions/commit/68d49a2d5507fc436dae15a5f2c5c95190f47182))
+* updated cocreate modules versions ([157cdea](https://github.com/CoCreate-app/CoCreate-actions/commit/157cdea87075cbfe8e54aa1dfb8c75141323bd2c))
+* webpack.config and devdependencies ([0e4dcc5](https://github.com/CoCreate-app/CoCreate-actions/commit/0e4dcc5fcf46c314aba28bb57e219516c4dba978))
+* webpack.config.js ([aa2ba21](https://github.com/CoCreate-app/CoCreate-actions/commit/aa2ba21c6a4cedfc68c554a1e67235ee7cea939c))
+* webpack.config.js ([eb48840](https://github.com/CoCreate-app/CoCreate-actions/commit/eb4884063a39ca7a669af52c6ecf94725fe62411))
+* webpack.config.js ([d24dfa5](https://github.com/CoCreate-app/CoCreate-actions/commit/d24dfa51326afd3b50552626ff24d59a2bf7b344))
+
 # [1.21.0](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.20.1...v1.21.0) (2025-04-11)
 
 
