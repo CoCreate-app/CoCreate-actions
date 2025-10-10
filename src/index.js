@@ -129,7 +129,7 @@ function runAction(stagedActions, index, element) {
 }
 
 function runSpecialAction(actions, index, element, actionName, params) {
-	if (!params && actionName !== "submit") return "next";
+	if (!params && actionName !== "submit" && actionName !== "disabled") return "next";
 	let elements,
 		status = "next";
 	switch (actionName) {
@@ -208,6 +208,16 @@ function runSpecialAction(actions, index, element, actionName, params) {
 				// Dispatch the custom submit event
 				if (form.dispatchEvent(submitEvent)) {
 					form.submit(); // Proceed with form submission if the event isn't canceled
+				}
+			}
+			break;
+		case "disabled":
+			let button = element.closest("button");
+			if (button) {
+				if (button.hasAttribute("disabled")) {
+					button.removeAttribute("disabled");
+				} else {
+					button.setAttribute("disabled", "");
 				}
 			}
 			break;
