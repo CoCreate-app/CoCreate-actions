@@ -1,3 +1,10 @@
+## [1.21.3](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.21.2...v1.21.3) (2025-10-11)
+
+
+### Bug Fixes
+
+* enhance runSpecialAction to toggle button disabled state ([3d2d72a](https://github.com/CoCreate-app/CoCreate-actions/commit/3d2d72a57e802aa333549caf879b5a539ce1fa97))
+
 ## [1.21.2](https://github.com/CoCreate-app/CoCreate-actions/compare/v1.21.1...v1.21.2) (2025-05-01)
 
 
